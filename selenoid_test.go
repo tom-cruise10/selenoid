@@ -277,10 +277,13 @@ func TestSessionCreatedFirstMatchOnly(t *testing.T) {
 
 func TestSessionCreatedWdHub(t *testing.T) {
 	root := http.NewServeMux()
+	selenium := Selenium()
 	root.Handle("/wd/hub/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		r.URL.Path = strings.TrimPrefix(r.URL.Path, "/wd/hub")
-		Selenium().ServeHTTP(w, r)
+		selenium.ServeHTTP(w, r)
 	}))
+	root.Handle("/json/version", selenium)
+	root.Handle("/json", selenium)
 	manager = &HTTPTest{Handler: root}
 
 	resp, err := http.Post(With(srv.URL).Path("/wd/hub/session"), "", bytes.NewReader([]byte("{}")))
@@ -302,11 +305,14 @@ func TestSessionCreatedWdHub(t *testing.T) {
 
 func TestSessionWithContentTypeCreatedWdHub(t *testing.T) {
 	root := http.NewServeMux()
+	selenium := Selenium()
 	root.Handle("/wd/hub/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		r.URL.Path = strings.TrimPrefix(r.URL.Path, "/wd/hub")
 		assert.Equal(t, r.Header.Get("Content-Type"), "application/json; charset=utf-8")
-		Selenium().ServeHTTP(w, r)
+		selenium.ServeHTTP(w, r)
 	}))
+	root.Handle("/json/version", selenium)
+	root.Handle("/json", selenium)
 	manager = &HTTPTest{Handler: root}
 
 	resp, err := http.Post(With(srv.URL).Path("/wd/hub/session"), "application/json; charset=utf-8", bytes.NewReader([]byte("{}")))

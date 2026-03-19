@@ -1,29 +1,108 @@
-03/19 05:13:14 [-] [INIT] [Loading configuration files...]
-2026/03/19 05:13:14 [-] [INIT] [Loading configuration files...]
-2026/03/19 05:13:14 [-] [INIT] [Loaded configuration from /tmp/config1059026332]
-2026/03/19 05:13:14 [-] [INIT] [Loaded configuration from /tmp/config1059026332]
-2026/03/19 05:13:14 [-] [INIT] [Loaded log configuration from config/container-logs.json]
-2026/03/19 05:13:14 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from config/browsers.json]
+2026/03/19 05:19:25 [-] [INIT] [Video Dir: /home/runner/work/selenoid/selenoid/video]
+2026/03/19 05:19:25 [-] [INIT] [Your Docker API version is 1.48]
+2026/03/19 05:19:25 [-] [INIT] [Will save sessions metadata]
+=== RUN   TestConfig
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config4035011414]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+--- PASS: TestConfig (0.00s)
+=== RUN   TestConfigError
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+--- PASS: TestConfigError (0.00s)
+=== RUN   TestLogConfigError
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config4215658757]
+--- PASS: TestLogConfigError (0.00s)
+=== RUN   TestConfigParseError
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+--- PASS: TestConfigParseError (0.00s)
+=== RUN   TestConfigEmptyState
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config3096328540]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+--- PASS: TestConfigEmptyState (0.00s)
+=== RUN   TestConfigNonEmptyState
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config3105584697]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+--- PASS: TestConfigNonEmptyState (0.00s)
+=== RUN   TestConfigEmptyVersions
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config4023796914]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+--- PASS: TestConfigEmptyVersions (0.00s)
+=== RUN   TestConfigNonEmptyVersions
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config704416250]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+--- PASS: TestConfigNonEmptyVersions (0.00s)
+=== RUN   TestConfigFindMissingBrowser
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config4014654385]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+--- PASS: TestConfigFindMissingBrowser (0.00s)
+=== RUN   TestConfigFindDefaultVersionError
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config4210102050]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+2026/03/19 05:19:25 [-] [DEFAULT_VERSION] [Using default version: ]
+--- PASS: TestConfigFindDefaultVersionError (0.00s)
+=== RUN   TestConfigFindDefaultVersion
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config1504106241]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+2026/03/19 05:19:25 [-] [DEFAULT_VERSION] [Using default version: 49.0]
+--- PASS: TestConfigFindDefaultVersion (0.00s)
+=== RUN   TestConfigFindFoundByEmptyPrefix
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config3046573863]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+2026/03/19 05:19:25 [-] [DEFAULT_VERSION] [Using default version: 49.0]
+--- PASS: TestConfigFindFoundByEmptyPrefix (0.00s)
+=== RUN   TestConfigFindFoundByPrefix
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config1230824346]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+--- PASS: TestConfigFindFoundByPrefix (0.00s)
+=== RUN   TestConfigFindFoundByMatch
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config3154924843]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+--- PASS: TestConfigFindFoundByMatch (0.00s)
+=== RUN   TestConfigFindImage
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config1056932944]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+--- PASS: TestConfigFindImage (0.00s)
+=== RUN   TestConfigConcurrentLoad
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config3024693745]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config3024693745]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
 --- PASS: TestConfigConcurrentLoad (0.00s)
 === RUN   TestConfigConcurrentLoadAndRead
-2026/03/19 05:13:14 [-] [INIT] [Loading configuration files...]
-2026/03/19 05:13:14 [-] [INIT] [Loaded configuration from /tmp/config2881856257]
-2026/03/19 05:13:14 [-] [INIT] [Loaded log configuration from config/container-logs.json]
-2026/03/19 05:13:14 [-] [INIT] [Loading configuration files...]
-2026/03/19 05:13:14 [-] [DEFAULT_VERSION] [Using default version: 49.0]
-2026/03/19 05:13:14 [-] [INIT] [Loaded configuration from /tmp/config2881856257]
-2026/03/19 05:13:14 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config482237589]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [DEFAULT_VERSION] [Using default version: 49.0]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config482237589]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
 --- PASS: TestConfigConcurrentLoadAndRead (0.00s)
 === RUN   TestConfigConcurrentRead
-2026/03/19 05:13:14 [-] [INIT] [Loading configuration files...]
-2026/03/19 05:13:14 [-] [INIT] [Loaded configuration from /tmp/config1998865879]
-2026/03/19 05:13:14 [-] [INIT] [Loaded log configuration from config/container-logs.json]
-2026/03/19 05:13:14 [-] [DEFAULT_VERSION] [Using default version: 49.0]
-2026/03/19 05:13:14 [-] [DEFAULT_VERSION] [Using default version: 49.0]
+2026/03/19 05:19:25 [-] [INIT] [Loading configuration files...]
+2026/03/19 05:19:25 [-] [INIT] [Loaded configuration from /tmp/config3679686552]
+2026/03/19 05:19:25 [-] [INIT] [Loaded log configuration from config/container-logs.json]
+2026/03/19 05:19:25 [-] [DEFAULT_VERSION] [Using default version: 49.0]
+2026/03/19 05:19:25 [-] [DEFAULT_VERSION] [Using default version: 49.0]
 --- PASS: TestConfigConcurrentRead (0.00s)
 === RUN   TestS3Uploader
-2026/03/19 05:13:14 [-] [INIT] [Initialized S3 support: endpoint = http://s3-mock.example.com, region = us-west-1, bucketName = test-bucket, accessKey = some-access-key, keyPattern = $fileName, includeFiles = , excludeFiles = , forcePathStyle = false]
---- PASS: TestS3Uploader (0.02s)
+2026/03/19 05:19:25 [-] [INIT] [Initialized S3 support: endpoint = http://s3-mock.example.com, region = us-west-1, bucketName = test-bucket, accessKey = some-access-key, keyPattern = $fileName, includeFiles = , excludeFiles = , forcePathStyle = false]
+--- PASS: TestS3Uploader (0.04s)
 === RUN   TestGetKey
 --- PASS: TestGetKey (0.00s)
 === RUN   TestFileMatches
@@ -31,21 +110,21 @@
 === RUN   TestNewSessionWithGet
 --- PASS: TestNewSessionWithGet (0.00s)
 === RUN   TestBadJsonFormat
-2026/03/19 05:13:14 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [0] [BAD_JSON_FORMAT] [unexpected end of JSON input]
+2026/03/19 05:19:25 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [0] [BAD_JSON_FORMAT] [unexpected end of JSON input]
 --- PASS: TestBadJsonFormat (0.00s)
 === RUN   TestServiceStartupFailure
-2026/03/19 05:13:14 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 Starting StartupError Service...
-2026/03/19 05:13:14 Failed to start StartupError Service...
-2026/03/19 05:13:14 [1] [SERVICE_STARTUP_FAILED] [failed to start Service]
+2026/03/19 05:19:25 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 Starting StartupError Service...
+2026/03/19 05:19:25 Failed to start StartupError Service...
+2026/03/19 05:19:25 [1] [SERVICE_STARTUP_FAILED] [failed to start Service]
 --- PASS: TestServiceStartupFailure (0.00s)
 === RUN   TestBrowserNotFound
-2026/03/19 05:13:14 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [2] [ENVIRONMENT_NOT_AVAILABLE] [] []
+2026/03/19 05:19:25 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [2] [ENVIRONMENT_NOT_AVAILABLE] [] []
 --- PASS: TestBrowserNotFound (0.00s)
 === RUN   TestGetDefaultScreenResolution
 --- PASS: TestGetDefaultScreenResolution (0.00s)
@@ -54,978 +133,465 @@
 === RUN   TestGetShortScreenResolution
 --- PASS: TestGetShortScreenResolution (0.00s)
 === RUN   TestTooBigSessionTimeoutCapability
-2026/03/19 05:13:14 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [3] [ENVIRONMENT_NOT_AVAILABLE] [] []
+2026/03/19 05:19:25 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [3] [ENVIRONMENT_NOT_AVAILABLE] [] []
 --- PASS: TestTooBigSessionTimeoutCapability (0.00s)
 === RUN   TestInvalidSessionTimeoutCapability
-2026/03/19 05:13:14 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [4] [BAD_SESSION_TIMEOUT] [wrong-value]
+2026/03/19 05:19:25 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [4] [BAD_SESSION_TIMEOUT] [wrong-value]
 --- PASS: TestInvalidSessionTimeoutCapability (0.00s)
 === RUN   TestMalformedScreenResolutionCapability
-2026/03/19 05:13:14 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [5] [BAD_SCREEN_RESOLUTION] [bad-resolution]
+2026/03/19 05:19:25 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [5] [BAD_SCREEN_RESOLUTION] [bad-resolution]
 --- PASS: TestMalformedScreenResolutionCapability (0.00s)
 === RUN   TestGetVideoScreenSizeFromCapability
 --- PASS: TestGetVideoScreenSizeFromCapability (0.00s)
 === RUN   TestDetermineVideoScreenSizeFromScreenResolution
 --- PASS: TestDetermineVideoScreenSizeFromScreenResolution (0.00s)
 === RUN   TestMalformedVideoScreenSizeCapability
-2026/03/19 05:13:14 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [6] [BAD_VIDEO_SCREEN_SIZE] [bad-size]
+2026/03/19 05:19:25 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [6] [BAD_VIDEO_SCREEN_SIZE] [bad-size]
 --- PASS: TestMalformedVideoScreenSizeCapability (0.00s)
 === RUN   TestNewSessionNotFound
 --- PASS: TestNewSessionNotFound (0.00s)
 === RUN   TestNewSessionHostDown
-2026/03/19 05:13:14 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 Starting HTTPTest Service...
-2026/03/19 05:13:14 HTTPTest Service started...
-2026/03/19 05:13:14 Host is going down...
-2026/03/19 05:13:14 Now Host is down...
-2026/03/19 05:13:14 [8] [SESSION_ATTEMPTED] [http://127.0.0.1:42687] [1]
-2026/03/19 05:13:14 [8] [SESSION_FAILED] [http://127.0.0.1:42687] [Post "http://127.0.0.1:42687/session": dial tcp 127.0.0.1:42687: connect: connection refused]
-2026/03/19 05:13:14 Stopping HTTPTest Service...
-2026/03/19 05:13:14 HTTPTest Service stopped...
+2026/03/19 05:19:25 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 Starting HTTPTest Service...
+2026/03/19 05:19:25 HTTPTest Service started...
+2026/03/19 05:19:25 Host is going down...
+2026/03/19 05:19:25 Now Host is down...
+2026/03/19 05:19:25 [8] [SESSION_ATTEMPTED] [http://127.0.0.1:45985] [1]
+2026/03/19 05:19:25 [8] [SESSION_FAILED] [http://127.0.0.1:45985] [Post "http://127.0.0.1:45985/session": dial tcp 127.0.0.1:45985: connect: connection refused]
+2026/03/19 05:19:25 Stopping HTTPTest Service...
+2026/03/19 05:19:25 HTTPTest Service stopped...
 --- PASS: TestNewSessionHostDown (0.00s)
 === RUN   TestNewSessionBadHostResponse
-2026/03/19 05:13:14 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 Starting HTTPTest Service...
-2026/03/19 05:13:14 HTTPTest Service started...
-2026/03/19 05:13:14 [9] [SESSION_ATTEMPTED] [http://127.0.0.1:42049] [1]
-2026/03/19 05:13:14 [9] [ERROR_PROCESSING_RESPONSE] [parse body response: invalid character 'B' looking for beginning of value]
-2026/03/19 05:13:14 Stopping HTTPTest Service...
-2026/03/19 05:13:14 HTTPTest Service stopped...
+2026/03/19 05:19:25 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 Starting HTTPTest Service...
+2026/03/19 05:19:25 HTTPTest Service started...
+2026/03/19 05:19:25 [9] [SESSION_ATTEMPTED] [http://127.0.0.1:37967] [1]
+2026/03/19 05:19:25 [9] [ERROR_PROCESSING_RESPONSE] [parse body response: invalid character 'B' looking for beginning of value]
+2026/03/19 05:19:25 Stopping HTTPTest Service...
+2026/03/19 05:19:25 HTTPTest Service stopped...
 --- PASS: TestNewSessionBadHostResponse (0.00s)
 === RUN   TestSessionCreated
-2026/03/19 05:13:14 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:14 Starting HTTPTest Service...
-2026/03/19 05:13:14 HTTPTest Service started...
-2026/03/19 05:13:14 [10] [SESSION_ATTEMPTED] [http://127.0.0.1:40779] [1]
-2026/03/19 05:13:14 [10] [DEBUG] driverSessionId: f4bf4dd2-264c-476a-925f-985cdcf98f9c, connecting to devtoolsHost: 127.0.0.1:40779
-2026/03/19 05:13:14 [10] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:40779/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:14 [10] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:40779/json failed (body: test-clipboard-value)
-2026/03/19 05:13:15 [10] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:40779/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:15 [10] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:40779/json failed (body: test-clipboard-value)
-2026/03/19 05:13:15 [10] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:40779/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:15 [10] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:40779/json failed (body: test-clipboard-value)
-2026/03/19 05:13:16 [10] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:40779/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:16 [10] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:40779/json failed (body: test-clipboard-value)
-2026/03/19 05:13:16 [10] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:40779/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:16 [10] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:40779/json failed (body: test-clipboard-value)
-2026/03/19 05:13:17 [10] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:40779/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:17 [10] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:40779/json failed (body: test-clipboard-value)
-2026/03/19 05:13:17 [10] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:40779/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:17 [10] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:40779/json failed (body: test-clipboard-value)
-2026/03/19 05:13:18 [10] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:40779/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:18 [10] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:40779/json failed (body: test-clipboard-value)
-2026/03/19 05:13:18 [10] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:40779/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:18 [10] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:40779/json failed (body: test-clipboard-value)
-2026/03/19 05:13:19 [10] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:40779/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:19 [10] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:40779/json failed (body: test-clipboard-value)
-2026/03/19 05:13:19 [10] [SESSION_CREATED] [f4bf4dd2-264c-476a-925f-985cdcf98f9c] [1] [5.02s]
---- PASS: TestSessionCreated (5.02s)
+2026/03/19 05:19:25 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 Starting HTTPTest Service...
+2026/03/19 05:19:25 HTTPTest Service started...
+2026/03/19 05:19:25 [10] [SESSION_ATTEMPTED] [http://127.0.0.1:34617] [1]
+2026/03/19 05:19:25 [10] [DEBUG] driverSessionId: 23223b06-ed26-4f9e-847a-28141d942634, connecting to devtoolsHost: 127.0.0.1:34617
+2026/03/19 05:19:25 [10] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:25 [10] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+--- PASS: TestSessionCreated (0.00s)
 === RUN   TestSessionCreatedW3C
-2026/03/19 05:13:19 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:19 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:19 Starting HTTPTest Service...
-2026/03/19 05:13:19 HTTPTest Service started...
-2026/03/19 05:13:19 [11] [SESSION_ATTEMPTED] [http://127.0.0.1:39719] [1]
-2026/03/19 05:13:19 [11] [DEBUG] driverSessionId: 955d0de2-96b4-4c52-9ff0-b2a78831676f, connecting to devtoolsHost: 127.0.0.1:39719
-2026/03/19 05:13:19 [11] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:39719/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:19 [11] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:39719/json failed (body: test-clipboard-value)
-2026/03/19 05:13:20 [11] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:39719/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:20 [11] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:39719/json failed (body: test-clipboard-value)
-2026/03/19 05:13:20 [11] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:39719/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:20 [11] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:39719/json failed (body: test-clipboard-value)
-2026/03/19 05:13:21 [11] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:39719/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:21 [11] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:39719/json failed (body: test-clipboard-value)
-2026/03/19 05:13:21 [11] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:39719/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:21 [11] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:39719/json failed (body: test-clipboard-value)
-2026/03/19 05:13:22 [11] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:39719/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:22 [11] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:39719/json failed (body: test-clipboard-value)
-2026/03/19 05:13:22 [10] [SESSION_TIMED_OUT] [f4bf4dd2-264c-476a-925f-985cdcf98f9c]
-2026/03/19 05:13:22 [10] [DELETE_FAILED] [f4bf4dd2-264c-476a-925f-985cdcf98f9c] [404 Not Found]
-2026/03/19 05:13:22 [11] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:39719/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:22 [11] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:39719/json failed (body: test-clipboard-value)
-2026/03/19 05:13:23 [11] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:39719/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:23 [11] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:39719/json failed (body: test-clipboard-value)
-2026/03/19 05:13:23 [11] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:39719/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:23 [11] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:39719/json failed (body: test-clipboard-value)
-2026/03/19 05:13:24 [11] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:39719/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:24 [11] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:39719/json failed (body: test-clipboard-value)
-2026/03/19 05:13:24 [11] [SESSION_CREATED] [955d0de2-96b4-4c52-9ff0-b2a78831676f] [1] [5.02s]
---- PASS: TestSessionCreatedW3C (5.02s)
+2026/03/19 05:19:25 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 Starting HTTPTest Service...
+2026/03/19 05:19:25 HTTPTest Service started...
+2026/03/19 05:19:25 [11] [SESSION_ATTEMPTED] [http://127.0.0.1:41889] [1]
+2026/03/19 05:19:25 [11] [DEBUG] driverSessionId: 3b3b6cbc-ba88-49a1-823e-a0dca1e8e2b7, connecting to devtoolsHost: 127.0.0.1:41889
+2026/03/19 05:19:25 [11] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:25 [11] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+--- PASS: TestSessionCreatedW3C (0.00s)
 === RUN   TestSessionCreatedFirstMatchOnly
-2026/03/19 05:13:24 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:24 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:24 Starting HTTPTest Service...
-2026/03/19 05:13:24 HTTPTest Service started...
-2026/03/19 05:13:24 [13] [SESSION_ATTEMPTED] [http://127.0.0.1:45855] [1]
-2026/03/19 05:13:24 [13] [DEBUG] driverSessionId: 29c91f52-f3a4-4abd-bba3-22e9ac3ea118, connecting to devtoolsHost: 127.0.0.1:45855
-2026/03/19 05:13:24 [13] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:45855/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:24 [13] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:45855/json failed (body: test-clipboard-value)
-2026/03/19 05:13:25 [13] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:45855/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:25 [13] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:45855/json failed (body: test-clipboard-value)
-2026/03/19 05:13:25 [13] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:45855/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:25 [13] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:45855/json failed (body: test-clipboard-value)
-2026/03/19 05:13:26 [13] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:45855/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:26 [13] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:45855/json failed (body: test-clipboard-value)
-2026/03/19 05:13:26 [13] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:45855/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:26 [13] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:45855/json failed (body: test-clipboard-value)
-2026/03/19 05:13:27 [13] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:45855/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:27 [13] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:45855/json failed (body: test-clipboard-value)
-2026/03/19 05:13:27 [13] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:45855/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:27 [13] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:45855/json failed (body: test-clipboard-value)
-2026/03/19 05:13:28 [13] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:45855/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:28 [13] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:45855/json failed (body: test-clipboard-value)
-2026/03/19 05:13:28 [13] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:45855/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:28 [13] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:45855/json failed (body: test-clipboard-value)
-2026/03/19 05:13:29 [13] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:45855/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:29 [13] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:45855/json failed (body: test-clipboard-value)
-2026/03/19 05:13:29 [11] [SESSION_TIMED_OUT] [955d0de2-96b4-4c52-9ff0-b2a78831676f]
-2026/03/19 05:13:29 [11] [DELETE_FAILED] [955d0de2-96b4-4c52-9ff0-b2a78831676f] [404 Not Found]
-2026/03/19 05:13:29 [13] [SESSION_CREATED] [29c91f52-f3a4-4abd-bba3-22e9ac3ea118] [1] [5.02s]
---- PASS: TestSessionCreatedFirstMatchOnly (5.02s)
+2026/03/19 05:19:25 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 Starting HTTPTest Service...
+2026/03/19 05:19:25 HTTPTest Service started...
+2026/03/19 05:19:25 [12] [SESSION_ATTEMPTED] [http://127.0.0.1:45193] [1]
+2026/03/19 05:19:25 [12] [DEBUG] driverSessionId: fbce0d5e-bc22-4a3d-858c-aeea690564f5, connecting to devtoolsHost: 127.0.0.1:45193
+2026/03/19 05:19:25 [12] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:25 [12] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+--- PASS: TestSessionCreatedFirstMatchOnly (0.00s)
 === RUN   TestSessionCreatedWdHub
-2026/03/19 05:13:29 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:29 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:29 Starting HTTPTest Service...
-2026/03/19 05:13:29 HTTPTest Service started...
-2026/03/19 05:13:29 [15] [SESSION_ATTEMPTED] [http://127.0.0.1:33425] [1]
-2026/03/19 05:13:29 [15] [SESSION_ATTEMPTED] [http://127.0.0.1:33425/wd/hub] [2]
-2026/03/19 05:13:29 [15] [DEBUG] driverSessionId: d1e9ace8-1c65-4d9d-8161-abf211684cd7, connecting to devtoolsHost: 127.0.0.1:33425
-2026/03/19 05:13:29 [15] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:33425/json/version failed (body: 404 page not found
+2026/03/19 05:19:25 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:25 Starting HTTPTest Service...
+2026/03/19 05:19:25 HTTPTest Service started...
+2026/03/19 05:19:25 [13] [SESSION_ATTEMPTED] [http://127.0.0.1:44567] [1]
+2026/03/19 05:19:25 [13] [SESSION_ATTEMPTED] [http://127.0.0.1:44567/wd/hub] [2]
+2026/03/19 05:19:25 [13] [DEBUG] driverSessionId: fb13038f-2601-4472-86f8-58bba155fd5a, connecting to devtoolsHost: 127.0.0.1:44567
+2026/03/19 05:19:25 [13] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:44567/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:29 [15] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:33425/json failed (body: 404 page not found
+2026/03/19 05:19:25 [13] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:44567/json failed (body: 404 page not found
 )
-2026/03/19 05:13:30 [15] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:33425/json/version failed (body: 404 page not found
+2026/03/19 05:19:26 [13] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:44567/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:30 [15] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:33425/json failed (body: 404 page not found
+2026/03/19 05:19:26 [13] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:44567/json failed (body: 404 page not found
 )
-2026/03/19 05:13:30 [15] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:33425/json/version failed (body: 404 page not found
+2026/03/19 05:19:26 [13] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:44567/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:30 [15] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:33425/json failed (body: 404 page not found
+2026/03/19 05:19:26 [13] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:44567/json failed (body: 404 page not found
 )
-2026/03/19 05:13:31 [15] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:33425/json/version failed (body: 404 page not found
+2026/03/19 05:19:27 [13] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:44567/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:31 [15] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:33425/json failed (body: 404 page not found
+2026/03/19 05:19:27 [13] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:44567/json failed (body: 404 page not found
 )
-2026/03/19 05:13:31 [15] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:33425/json/version failed (body: 404 page not found
+2026/03/19 05:19:27 [13] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:44567/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:31 [15] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:33425/json failed (body: 404 page not found
+2026/03/19 05:19:27 [13] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:44567/json failed (body: 404 page not found
 )
-2026/03/19 05:13:32 [15] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:33425/json/version failed (body: 404 page not found
+2026/03/19 05:19:28 [13] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:44567/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:32 [15] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:33425/json failed (body: 404 page not found
+2026/03/19 05:19:28 [13] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:44567/json failed (body: 404 page not found
 )
-2026/03/19 05:13:32 [15] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:33425/json/version failed (body: 404 page not found
+2026/03/19 05:19:28 [10] [SESSION_TIMED_OUT] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:28 [10] [DELETE_FAILED] [77777777-7777-7777-7777-777777777777] [404 Not Found]
+2026/03/19 05:19:28 [13] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:44567/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:32 [15] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:33425/json failed (body: 404 page not found
+2026/03/19 05:19:28 [13] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:44567/json failed (body: 404 page not found
 )
-2026/03/19 05:13:33 [15] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:33425/json/version failed (body: 404 page not found
+2026/03/19 05:19:29 [13] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:44567/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:33 [15] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:33425/json failed (body: 404 page not found
+2026/03/19 05:19:29 [13] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:44567/json failed (body: 404 page not found
 )
-2026/03/19 05:13:33 [15] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:33425/json/version failed (body: 404 page not found
+2026/03/19 05:19:29 [13] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:44567/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:33 [15] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:33425/json failed (body: 404 page not found
+2026/03/19 05:19:29 [13] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:44567/json failed (body: 404 page not found
 )
-2026/03/19 05:13:34 [15] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:33425/json/version failed (body: 404 page not found
+2026/03/19 05:19:30 [13] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:44567/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:34 [15] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:33425/json failed (body: 404 page not found
+2026/03/19 05:19:30 [13] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:44567/json failed (body: 404 page not found
 )
-2026/03/19 05:13:34 [13] [SESSION_TIMED_OUT] [29c91f52-f3a4-4abd-bba3-22e9ac3ea118]
-2026/03/19 05:13:34 [13] [DELETE_FAILED] [29c91f52-f3a4-4abd-bba3-22e9ac3ea118] [404 Not Found]
-2026/03/19 05:13:34 [15] [SESSION_CREATED] [d1e9ace8-1c65-4d9d-8161-abf211684cd7] [2] [5.02s]
+2026/03/19 05:19:30 [11] [SESSION_TIMED_OUT] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:30 [11] [DELETE_FAILED] [77777777-7777-7777-7777-777777777777] [404 Not Found]
+2026/03/19 05:19:30 [12] [SESSION_TIMED_OUT] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:30 [12] [DELETE_FAILED] [77777777-7777-7777-7777-777777777777] [404 Not Found]
+2026/03/19 05:19:30 [13] [SESSION_CREATED] [fb13038f-2601-4472-86f8-58bba155fd5a] [2] [5.02s]
 --- PASS: TestSessionCreatedWdHub (5.02s)
 === RUN   TestSessionWithContentTypeCreatedWdHub
-2026/03/19 05:13:34 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:34 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:34 Starting HTTPTest Service...
-2026/03/19 05:13:34 HTTPTest Service started...
-2026/03/19 05:13:34 [17] [SESSION_ATTEMPTED] [http://127.0.0.1:34667] [1]
-2026/03/19 05:13:34 [17] [SESSION_ATTEMPTED] [http://127.0.0.1:34667/wd/hub] [2]
-2026/03/19 05:13:34 [17] [DEBUG] driverSessionId: f4870c9c-e7ab-4b3c-ab7b-15aa42275864, connecting to devtoolsHost: 127.0.0.1:34667
-2026/03/19 05:13:34 [17] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:34667/json/version failed (body: 404 page not found
+2026/03/19 05:19:30 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:30 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:30 Starting HTTPTest Service...
+2026/03/19 05:19:30 HTTPTest Service started...
+2026/03/19 05:19:30 [17] [SESSION_ATTEMPTED] [http://127.0.0.1:42727] [1]
+2026/03/19 05:19:30 [17] [SESSION_ATTEMPTED] [http://127.0.0.1:42727/wd/hub] [2]
+2026/03/19 05:19:30 [17] [DEBUG] driverSessionId: a0629d3b-3160-4a64-9b9c-52d2b3a9649f, connecting to devtoolsHost: 127.0.0.1:42727
+2026/03/19 05:19:30 [17] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:42727/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:34 [17] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:34667/json failed (body: 404 page not found
+2026/03/19 05:19:30 [17] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:42727/json failed (body: 404 page not found
 )
-2026/03/19 05:13:35 [17] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:34667/json/version failed (body: 404 page not found
+2026/03/19 05:19:31 [17] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:42727/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:35 [17] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:34667/json failed (body: 404 page not found
+2026/03/19 05:19:31 [17] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:42727/json failed (body: 404 page not found
 )
-2026/03/19 05:13:35 [17] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:34667/json/version failed (body: 404 page not found
+2026/03/19 05:19:31 [17] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:42727/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:35 [17] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:34667/json failed (body: 404 page not found
+2026/03/19 05:19:31 [17] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:42727/json failed (body: 404 page not found
 )
-2026/03/19 05:13:36 [17] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:34667/json/version failed (body: 404 page not found
+2026/03/19 05:19:32 [17] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:42727/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:36 [17] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:34667/json failed (body: 404 page not found
+2026/03/19 05:19:32 [17] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:42727/json failed (body: 404 page not found
 )
-2026/03/19 05:13:36 [17] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:34667/json/version failed (body: 404 page not found
+2026/03/19 05:19:32 [17] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:42727/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:36 [17] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:34667/json failed (body: 404 page not found
+2026/03/19 05:19:32 [17] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:42727/json failed (body: 404 page not found
 )
-2026/03/19 05:13:37 [17] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:34667/json/version failed (body: 404 page not found
+2026/03/19 05:19:33 [17] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:42727/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:37 [17] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:34667/json failed (body: 404 page not found
+2026/03/19 05:19:33 [17] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:42727/json failed (body: 404 page not found
 )
-2026/03/19 05:13:37 [17] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:34667/json/version failed (body: 404 page not found
+2026/03/19 05:19:33 [17] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:42727/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:37 [17] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:34667/json failed (body: 404 page not found
+2026/03/19 05:19:33 [17] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:42727/json failed (body: 404 page not found
 )
-2026/03/19 05:13:38 [17] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:34667/json/version failed (body: 404 page not found
+2026/03/19 05:19:34 [17] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:42727/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:38 [17] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:34667/json failed (body: 404 page not found
+2026/03/19 05:19:34 [17] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:42727/json failed (body: 404 page not found
 )
-2026/03/19 05:13:38 [17] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:34667/json/version failed (body: 404 page not found
+2026/03/19 05:19:34 [17] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:42727/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:38 [17] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:34667/json failed (body: 404 page not found
+2026/03/19 05:19:34 [17] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:42727/json failed (body: 404 page not found
 )
-2026/03/19 05:13:39 [17] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:34667/json/version failed (body: 404 page not found
+2026/03/19 05:19:35 [17] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:42727/json/version failed (body: 404 page not found
 )
-2026/03/19 05:13:39 [17] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:34667/json failed (body: 404 page not found
+2026/03/19 05:19:35 [17] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:42727/json failed (body: 404 page not found
 )
-2026/03/19 05:13:39 [15] [SESSION_TIMED_OUT] [d1e9ace8-1c65-4d9d-8161-abf211684cd7]
-2026/03/19 05:13:39 [15] [DELETE_FAILED] [d1e9ace8-1c65-4d9d-8161-abf211684cd7] [404 Not Found]
-2026/03/19 05:13:39 [17] [SESSION_CREATED] [f4870c9c-e7ab-4b3c-ab7b-15aa42275864] [2] [5.02s]
+2026/03/19 05:19:35 [13] [SESSION_TIMED_OUT] [fb13038f-2601-4472-86f8-58bba155fd5a]
+2026/03/19 05:19:35 [13] [DELETE_FAILED] [fb13038f-2601-4472-86f8-58bba155fd5a] [404 Not Found]
+2026/03/19 05:19:35 [17] [SESSION_CREATED] [a0629d3b-3160-4a64-9b9c-52d2b3a9649f] [2] [5.02s]
 --- PASS: TestSessionWithContentTypeCreatedWdHub (5.02s)
 === RUN   TestSessionFailedAfterTimeout
-2026/03/19 05:13:39 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:39 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:39 Starting HTTPTest Service...
-2026/03/19 05:13:39 HTTPTest Service started...
-2026/03/19 05:13:39 [19] [SESSION_ATTEMPTED] [http://127.0.0.1:40357] [1]
-2026/03/19 05:13:39 [19] [SESSION_ATTEMPT_TIMED_OUT] [10ms]
-2026/03/19 05:13:39 [19] [SESSION_FAILED] [http://127.0.0.1:40357] [New session attempts retry count exceeded]
-2026/03/19 05:13:39 Stopping HTTPTest Service...
-2026/03/19 05:13:39 HTTPTest Service stopped...
+2026/03/19 05:19:35 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 Starting HTTPTest Service...
+2026/03/19 05:19:35 HTTPTest Service started...
+2026/03/19 05:19:35 [19] [SESSION_ATTEMPTED] [http://127.0.0.1:34089] [1]
+2026/03/19 05:19:35 [19] [SESSION_ATTEMPT_TIMED_OUT] [10ms]
+2026/03/19 05:19:35 [19] [SESSION_FAILED] [http://127.0.0.1:34089] [New session attempts retry count exceeded]
+2026/03/19 05:19:35 Stopping HTTPTest Service...
+2026/03/19 05:19:35 HTTPTest Service stopped...
 --- PASS: TestSessionFailedAfterTimeout (0.10s)
 === RUN   TestClientDisconnected
-2026/03/19 05:13:39 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:39 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:39 Starting HTTPTest Service...
-2026/03/19 05:13:39 HTTPTest Service started...
-2026/03/19 05:13:39 [20] [SESSION_ATTEMPTED] [http://127.0.0.1:43397] [1]
-2026/03/19 05:13:39 [20] [CLIENT_DISCONNECTED] [unknown] [127.0.0.1] [0.01s]
-2026/03/19 05:13:39 Stopping HTTPTest Service...
+2026/03/19 05:19:35 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 Starting HTTPTest Service...
+2026/03/19 05:19:35 HTTPTest Service started...
+2026/03/19 05:19:35 [20] [SESSION_ATTEMPTED] [http://127.0.0.1:33499] [1]
+2026/03/19 05:19:35 [20] [CLIENT_DISCONNECTED] [unknown] [127.0.0.1] [0.01s]
+2026/03/19 05:19:35 Stopping HTTPTest Service...
 --- PASS: TestClientDisconnected (0.01s)
 === RUN   TestSessionFailedAfterTwoTimeout
-2026/03/19 05:13:39 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:39 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:39 Starting HTTPTest Service...
-2026/03/19 05:13:39 HTTPTest Service started...
-2026/03/19 05:13:39 [21] [SESSION_ATTEMPTED] [http://127.0.0.1:33497] [1]
-2026/03/19 05:13:39 [21] [SESSION_ATTEMPT_TIMED_OUT] [10ms]
-2026/03/19 05:13:39 [21] [SESSION_ATTEMPTED] [http://127.0.0.1:33497] [2]
-2026/03/19 05:13:39 [21] [SESSION_ATTEMPT_TIMED_OUT] [10ms]
-2026/03/19 05:13:39 [21] [SESSION_FAILED] [http://127.0.0.1:33497] [New session attempts retry count exceeded]
-2026/03/19 05:13:39 Stopping HTTPTest Service...
-2026/03/19 05:13:39 HTTPTest Service stopped...
---- PASS: TestSessionFailedAfterTwoTimeout (0.11s)
+2026/03/19 05:19:35 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 Starting HTTPTest Service...
+2026/03/19 05:19:35 HTTPTest Service started...
+2026/03/19 05:19:35 [21] [SESSION_ATTEMPTED] [http://127.0.0.1:46135] [1]
+2026/03/19 05:19:35 [21] [SESSION_ATTEMPT_TIMED_OUT] [10ms]
+2026/03/19 05:19:35 [21] [SESSION_ATTEMPTED] [http://127.0.0.1:46135] [2]
+2026/03/19 05:19:35 [21] [SESSION_ATTEMPT_TIMED_OUT] [10ms]
+2026/03/19 05:19:35 [21] [SESSION_FAILED] [http://127.0.0.1:46135] [New session attempts retry count exceeded]
+2026/03/19 05:19:35 Stopping HTTPTest Service...
+2026/03/19 05:19:35 HTTPTest Service stopped...
+--- PASS: TestSessionFailedAfterTwoTimeout (0.12s)
 === RUN   TestSessionCreatedRedirect
-2026/03/19 05:13:39 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:39 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:39 Starting HTTPTest Service...
-2026/03/19 05:13:39 HTTPTest Service started...
-2026/03/19 05:13:39 [22] [SESSION_ATTEMPTED] [http://127.0.0.1:38899] [1]
-2026/03/19 05:13:39 [22] [SESSION_ATTEMPTED] [http://127.0.0.1:38899/wd/hub] [2]
-2026/03/19 05:13:39 [22] [SESSION_CREATED] [123] [2] [0.00s]
+2026/03/19 05:19:35 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 Starting HTTPTest Service...
+2026/03/19 05:19:35 HTTPTest Service started...
+2026/03/19 05:19:35 [22] [SESSION_ATTEMPTED] [http://127.0.0.1:36635] [1]
+2026/03/19 05:19:35 [22] [SESSION_ATTEMPTED] [http://127.0.0.1:36635/wd/hub] [2]
+2026/03/19 05:19:35 [22] [SESSION_CREATED] [123] [2] [0.00s]
 --- PASS: TestSessionCreatedRedirect (0.00s)
 === RUN   TestSessionCreatedRemoveExtensionCapabilities
-2026/03/19 05:13:39 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:39 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:39 Starting HTTPTest Service...
-2026/03/19 05:13:39 HTTPTest Service started...
-2026/03/19 05:13:39 [23] [SESSION_ATTEMPTED] [http://127.0.0.1:44673] [1]
-2026/03/19 05:13:39 [23] [SESSION_ATTEMPTED] [http://127.0.0.1:44673/wd/hub] [2]
-2026/03/19 05:13:39 [23] [ERROR_PROCESSING_RESPONSE] [parse body response: unexpected end of JSON input]
-2026/03/19 05:13:39 Stopping HTTPTest Service...
-2026/03/19 05:13:39 HTTPTest Service stopped...
+2026/03/19 05:19:35 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 Starting HTTPTest Service...
+2026/03/19 05:19:35 HTTPTest Service started...
+2026/03/19 05:19:35 [23] [SESSION_ATTEMPTED] [http://127.0.0.1:39229] [1]
+2026/03/19 05:19:35 [23] [SESSION_ATTEMPTED] [http://127.0.0.1:39229/wd/hub] [2]
+2026/03/19 05:19:35 [23] [ERROR_PROCESSING_RESPONSE] [parse body response: unexpected end of JSON input]
+2026/03/19 05:19:35 Stopping HTTPTest Service...
+2026/03/19 05:19:35 HTTPTest Service stopped...
 --- PASS: TestSessionCreatedRemoveExtensionCapabilities (0.00s)
 === RUN   TestProxySession
-2026/03/19 05:13:39 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:39 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:39 Starting HTTPTest Service...
-2026/03/19 05:13:39 HTTPTest Service started...
-2026/03/19 05:13:39 [24] [SESSION_ATTEMPTED] [http://127.0.0.1:37273] [1]
-2026/03/19 05:13:39 [24] [DEBUG] driverSessionId: d9a09afb-b905-41a9-9266-e75d9ad7907a, connecting to devtoolsHost: 127.0.0.1:37273
-2026/03/19 05:13:39 [24] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:37273/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:39 [24] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:37273/json failed (body: test-clipboard-value)
-2026/03/19 05:13:40 [24] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:37273/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:40 [24] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:37273/json failed (body: test-clipboard-value)
-2026/03/19 05:13:40 HTTPTest Service stopped...
-2026/03/19 05:13:40 [24] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:37273/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:40 [24] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:37273/json failed (body: test-clipboard-value)
-2026/03/19 05:13:41 [24] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:37273/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:41 [24] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:37273/json failed (body: test-clipboard-value)
-2026/03/19 05:13:41 [24] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:37273/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:41 [24] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:37273/json failed (body: test-clipboard-value)
-2026/03/19 05:13:42 [24] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:37273/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:42 [24] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:37273/json failed (body: test-clipboard-value)
-2026/03/19 05:13:42 [24] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:37273/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:42 [24] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:37273/json failed (body: test-clipboard-value)
-2026/03/19 05:13:43 [24] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:37273/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:43 [24] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:37273/json failed (body: test-clipboard-value)
-2026/03/19 05:13:43 [24] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:37273/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:43 [24] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:37273/json failed (body: test-clipboard-value)
-2026/03/19 05:13:44 [24] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:37273/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:44 [24] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:37273/json failed (body: test-clipboard-value)
-2026/03/19 05:13:44 [17] [SESSION_TIMED_OUT] [f4870c9c-e7ab-4b3c-ab7b-15aa42275864]
-2026/03/19 05:13:44 [17] [DELETE_FAILED] [f4870c9c-e7ab-4b3c-ab7b-15aa42275864] [404 Not Found]
-2026/03/19 05:13:44 [22] [SESSION_TIMED_OUT] [123]
-2026/03/19 05:13:44 [22] [DELETE_FAILED] [123] [404 Not Found]
-2026/03/19 05:13:44 [24] [SESSION_CREATED] [d9a09afb-b905-41a9-9266-e75d9ad7907a] [1] [5.02s]
---- PASS: TestProxySession (5.02s)
+2026/03/19 05:19:35 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 Starting HTTPTest Service...
+2026/03/19 05:19:35 HTTPTest Service started...
+2026/03/19 05:19:35 [24] [SESSION_ATTEMPTED] [http://127.0.0.1:32949] [1]
+2026/03/19 05:19:35 [24] [DEBUG] driverSessionId: 2f8d331a-cc91-48da-ad55-05bcde1b4788, connecting to devtoolsHost: 127.0.0.1:32949
+2026/03/19 05:19:35 [24] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:35 [24] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+2026/03/19 05:19:35 [25] [DEBUG] Translated path: /session/77777777-7777-7777-7777-777777777777/url -> /session/2f8d331a-cc91-48da-ad55-05bcde1b4788/url
+--- PASS: TestProxySession (0.00s)
 === RUN   TestProxySessionPanicOnAbortHandler
-2026/03/19 05:13:44 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:44 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:44 Starting HTTPTest Service...
-2026/03/19 05:13:44 HTTPTest Service started...
-2026/03/19 05:13:44 [28] [SESSION_ATTEMPTED] [http://127.0.0.1:45293] [1]
-2026/03/19 05:13:44 [28] [DEBUG] driverSessionId: 308755e7-4646-4b8c-86fc-24e0454115a4, connecting to devtoolsHost: 127.0.0.1:45293
-2026/03/19 05:13:44 [28] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:45293/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:44 [28] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:45293/json failed (body: test-clipboard-value)
-2026/03/19 05:13:45 [28] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:45293/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:45 [28] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:45293/json failed (body: test-clipboard-value)
-2026/03/19 05:13:45 [28] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:45293/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:45 [28] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:45293/json failed (body: test-clipboard-value)
-2026/03/19 05:13:46 [28] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:45293/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:46 [28] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:45293/json failed (body: test-clipboard-value)
-2026/03/19 05:13:46 [28] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:45293/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:46 [28] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:45293/json failed (body: test-clipboard-value)
-2026/03/19 05:13:47 [28] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:45293/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:47 [28] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:45293/json failed (body: test-clipboard-value)
-2026/03/19 05:13:47 [28] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:45293/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:47 [28] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:45293/json failed (body: test-clipboard-value)
-2026/03/19 05:13:48 [28] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:45293/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:48 [28] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:45293/json failed (body: test-clipboard-value)
-2026/03/19 05:13:48 [28] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:45293/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:48 [28] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:45293/json failed (body: test-clipboard-value)
-2026/03/19 05:13:49 [28] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:45293/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:49 [28] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:45293/json failed (body: test-clipboard-value)
-2026/03/19 05:13:49 [27] [SESSION_TIMED_OUT] [d9a09afb-b905-41a9-9266-e75d9ad7907a]
-2026/03/19 05:13:49 [27] [DELETE_FAILED] [d9a09afb-b905-41a9-9266-e75d9ad7907a] [404 Not Found]
-2026/03/19 05:13:49 [28] [SESSION_CREATED] [308755e7-4646-4b8c-86fc-24e0454115a4] [1] [5.02s]
-2026/03/19 05:13:49 httputil: ReverseProxy read error during body copy: unexpected EOF
-2026/03/19 05:13:49 httputil: ReverseProxy read error during body copy: unexpected EOF
-2026/03/19 05:13:49 httputil: ReverseProxy read error during body copy: unexpected EOF
---- PASS: TestProxySessionPanicOnAbortHandler (5.02s)
+2026/03/19 05:19:35 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 Starting HTTPTest Service...
+2026/03/19 05:19:35 HTTPTest Service started...
+2026/03/19 05:19:35 [26] [SESSION_ATTEMPTED] [http://127.0.0.1:38703] [1]
+2026/03/19 05:19:35 [26] [DEBUG] driverSessionId: 95485a01-4193-46e7-9559-b9ffb035a271, connecting to devtoolsHost: 127.0.0.1:38703
+2026/03/19 05:19:35 [26] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:35 [26] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+2026/03/19 05:19:35 [27] [DEBUG] Translated path: /session/77777777-7777-7777-7777-777777777777/url -> /session/95485a01-4193-46e7-9559-b9ffb035a271/url
+2026/03/19 05:19:35 httputil: ReverseProxy read error during body copy: unexpected EOF
+2026/03/19 05:19:35 [28] [DEBUG] Translated path: /session/77777777-7777-7777-7777-777777777777/url -> /session/95485a01-4193-46e7-9559-b9ffb035a271/url
+2026/03/19 05:19:35 httputil: ReverseProxy read error during body copy: unexpected EOF
+--- PASS: TestProxySessionPanicOnAbortHandler (0.00s)
 === RUN   TestSessionDeleted
-2026/03/19 05:13:49 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:49 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:49 Starting HTTPTest Service...
-2026/03/19 05:13:49 HTTPTest Service started...
-2026/03/19 05:13:49 [33] [SESSION_ATTEMPTED] [http://127.0.0.1:42075] [1]
-2026/03/19 05:13:49 [33] [DEBUG] driverSessionId: 223f9e8f-d00d-4150-a72a-be449aaebbbb, connecting to devtoolsHost: 127.0.0.1:42075
-2026/03/19 05:13:49 [33] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:42075/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:49 [33] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:42075/json failed (body: test-clipboard-value)
-2026/03/19 05:13:50 [33] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:42075/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:50 [33] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:42075/json failed (body: test-clipboard-value)
-2026/03/19 05:13:50 [33] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:42075/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:50 [33] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:42075/json failed (body: test-clipboard-value)
-2026/03/19 05:13:51 [33] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:42075/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:51 [33] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:42075/json failed (body: test-clipboard-value)
-2026/03/19 05:13:51 [33] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:42075/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:51 [33] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:42075/json failed (body: test-clipboard-value)
-2026/03/19 05:13:52 [33] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:42075/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:52 [33] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:42075/json failed (body: test-clipboard-value)
-2026/03/19 05:13:52 [33] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:42075/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:52 [33] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:42075/json failed (body: test-clipboard-value)
-2026/03/19 05:13:53 [33] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:42075/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:53 [33] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:42075/json failed (body: test-clipboard-value)
-2026/03/19 05:13:53 [33] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:42075/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:53 [33] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:42075/json failed (body: test-clipboard-value)
-2026/03/19 05:13:54 [33] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:42075/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:54 [33] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:42075/json failed (body: test-clipboard-value)
-2026/03/19 05:13:54 [32] [SESSION_TIMED_OUT] [308755e7-4646-4b8c-86fc-24e0454115a4]
-2026/03/19 05:13:54 [32] [DELETE_FAILED] [308755e7-4646-4b8c-86fc-24e0454115a4] [404 Not Found]
-2026/03/19 05:13:54 [33] [SESSION_CREATED] [223f9e8f-d00d-4150-a72a-be449aaebbbb] [1] [5.02s]
-2026/03/19 05:13:54 [35] [SESSION_DELETED] [223f9e8f-d00d-4150-a72a-be449aaebbbb]
-2026/03/19 05:13:54 Stopping HTTPTest Service...
-2026/03/19 05:13:54 HTTPTest Service stopped...
-2026/03/19 05:13:54 [33] [VIDEO_ERROR] [Failed to rename /tmp/selenoid-test2923006950/selenoid135058d22302a836425b6b0d8cc6247d.mp4 to /tmp/selenoid-test2923006950/61678fea32d5dbe8163fe1d1d9472c3f.mp4: rename /tmp/selenoid-test2923006950/selenoid135058d22302a836425b6b0d8cc6247d.mp4 /tmp/selenoid-test2923006950/61678fea32d5dbe8163fe1d1d9472c3f.mp4: no such file or directory]
-2026/03/19 05:13:54 [33] [LOG_ERROR] [Failed to rename /tmp/selenoid-test1295095611/selenoidb3a69f7a5c16c90b0a095250ce03dfde.log to /tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.log: rename /tmp/selenoid-test1295095611/selenoidb3a69f7a5c16c90b0a095250ce03dfde.log /tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.log: no such file or directory]
---- PASS: TestSessionDeleted (5.02s)
-2026/03/19 05:13:54 [33] [METADATA] [61678fea32d5dbe8163fe1d1d9472c3f] [/tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.json]
+2026/03/19 05:19:35 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 Starting HTTPTest Service...
+2026/03/19 05:19:35 HTTPTest Service started...
+2026/03/19 05:19:35 [29] [SESSION_ATTEMPTED] [http://127.0.0.1:46671] [1]
+2026/03/19 05:19:35 [29] [DEBUG] driverSessionId: 589202a6-e7d4-4845-8242-e8ff6e9c7839, connecting to devtoolsHost: 127.0.0.1:46671
+2026/03/19 05:19:35 [29] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:35 [29] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+2026/03/19 05:19:35 [30] [SESSION_DELETED] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:35 [30] [DEBUG] Translated path: /session/77777777-7777-7777-7777-777777777777 -> /session/589202a6-e7d4-4845-8242-e8ff6e9c7839
+2026/03/19 05:19:35 Stopping HTTPTest Service...
+2026/03/19 05:19:35 HTTPTest Service stopped...
+2026/03/19 05:19:35 [29] [VIDEO_ERROR] [Failed to rename /tmp/selenoid-test1571552429/selenoidbb775db8444db8c8837a3ee019227473.mp4 to /tmp/selenoid-test1571552429/61678fea32d5dbe8163fe1d1d9472c3f.mp4: rename /tmp/selenoid-test1571552429/selenoidbb775db8444db8c8837a3ee019227473.mp4 /tmp/selenoid-test1571552429/61678fea32d5dbe8163fe1d1d9472c3f.mp4: no such file or directory]
+2026/03/19 05:19:35 [29] [LOG_ERROR] [Failed to rename /tmp/selenoid-test1698420002/selenoidfe8757ed3b142a9f30a44a692225254a.log to /tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.log: rename /tmp/selenoid-test1698420002/selenoidfe8757ed3b142a9f30a44a692225254a.log /tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.log: no such file or directory]
+2026/03/19 05:19:35 [29] [METADATA] [61678fea32d5dbe8163fe1d1d9472c3f] [/tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.json]
+2026/03/19 05:19:35 [29] [UPLOADING_FILE] [/tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.json] [Failed to upload: S3 uploader is not initialized]
+--- PASS: TestSessionDeleted (0.00s)
 === RUN   TestSessionOnClose
-2026/03/19 05:13:54 [33] [UPLOADING_FILE] [/tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.json] [Failed to upload: S3 uploader is not initialized]
-2026/03/19 05:13:54 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:54 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:54 Starting HTTPTest Service...
-2026/03/19 05:13:54 HTTPTest Service started...
-2026/03/19 05:13:54 [36] [SESSION_ATTEMPTED] [http://127.0.0.1:33515] [1]
-2026/03/19 05:13:54 [36] [DEBUG] driverSessionId: 290f3bc0-8f6b-4404-bf11-6e49d2d99598, connecting to devtoolsHost: 127.0.0.1:33515
-2026/03/19 05:13:54 [36] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:33515/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:54 [36] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:33515/json failed (body: test-clipboard-value)
-2026/03/19 05:13:55 [36] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:33515/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:55 [36] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:33515/json failed (body: test-clipboard-value)
-2026/03/19 05:13:55 [36] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:33515/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:55 [36] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:33515/json failed (body: test-clipboard-value)
-2026/03/19 05:13:56 [36] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:33515/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:56 [36] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:33515/json failed (body: test-clipboard-value)
-2026/03/19 05:13:56 [36] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:33515/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:56 [36] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:33515/json failed (body: test-clipboard-value)
-2026/03/19 05:13:57 [36] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:33515/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:57 [36] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:33515/json failed (body: test-clipboard-value)
-2026/03/19 05:13:57 [36] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:33515/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:57 [36] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:33515/json failed (body: test-clipboard-value)
-2026/03/19 05:13:58 [36] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:33515/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:58 [36] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:33515/json failed (body: test-clipboard-value)
-2026/03/19 05:13:58 [36] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:33515/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:58 [36] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:33515/json failed (body: test-clipboard-value)
-2026/03/19 05:13:59 [36] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:33515/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:59 [36] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:33515/json failed (body: test-clipboard-value)
-2026/03/19 05:13:59 [36] [SESSION_CREATED] [290f3bc0-8f6b-4404-bf11-6e49d2d99598] [1] [5.02s]
---- PASS: TestSessionOnClose (5.02s)
+2026/03/19 05:19:35 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 Starting HTTPTest Service...
+2026/03/19 05:19:35 HTTPTest Service started...
+2026/03/19 05:19:35 [31] [SESSION_ATTEMPTED] [http://127.0.0.1:45085] [1]
+2026/03/19 05:19:35 [31] [DEBUG] driverSessionId: f39c4984-3eba-47d5-b33c-16c99834469e, connecting to devtoolsHost: 127.0.0.1:45085
+2026/03/19 05:19:35 [31] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:35 [31] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+2026/03/19 05:19:35 [32] [DEBUG] Translated path: /session/77777777-7777-7777-7777-777777777777/window -> /session/f39c4984-3eba-47d5-b33c-16c99834469e/window
+--- PASS: TestSessionOnClose (0.00s)
 === RUN   TestProxySessionCanceled
-2026/03/19 05:13:59 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:13:59 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:13:59 Starting HTTPTest Service...
-2026/03/19 05:13:59 HTTPTest Service started...
-2026/03/19 05:13:59 [38] [SESSION_ATTEMPTED] [http://127.0.0.1:39585] [1]
-2026/03/19 05:13:59 [38] [DEBUG] driverSessionId: 94df984c-a28e-4119-b411-160cd51ad9e0, connecting to devtoolsHost: 127.0.0.1:39585
-2026/03/19 05:13:59 [38] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:39585/json/version failed (body: test-clipboard-value)
-2026/03/19 05:13:59 [38] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:39585/json failed (body: test-clipboard-value)
-2026/03/19 05:14:00 [38] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:39585/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:00 [38] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:39585/json failed (body: test-clipboard-value)
-2026/03/19 05:14:00 [38] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:39585/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:00 [38] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:39585/json failed (body: test-clipboard-value)
-2026/03/19 05:14:01 [38] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:39585/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:01 [38] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:39585/json failed (body: test-clipboard-value)
-2026/03/19 05:14:01 [38] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:39585/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:01 [38] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:39585/json failed (body: test-clipboard-value)
-2026/03/19 05:14:02 [38] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:39585/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:02 [38] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:39585/json failed (body: test-clipboard-value)
-2026/03/19 05:14:02 [38] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:39585/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:02 [38] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:39585/json failed (body: test-clipboard-value)
-2026/03/19 05:14:03 [38] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:39585/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:03 [38] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:39585/json failed (body: test-clipboard-value)
-2026/03/19 05:14:03 [38] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:39585/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:03 [38] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:39585/json failed (body: test-clipboard-value)
-2026/03/19 05:14:04 [38] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:39585/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:04 [38] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:39585/json failed (body: test-clipboard-value)
-2026/03/19 05:14:04 [37] [SESSION_TIMED_OUT] [290f3bc0-8f6b-4404-bf11-6e49d2d99598]
-2026/03/19 05:14:04 [37] [DELETE_FAILED] [290f3bc0-8f6b-4404-bf11-6e49d2d99598] [404 Not Found]
-2026/03/19 05:14:04 [38] [SESSION_CREATED] [94df984c-a28e-4119-b411-160cd51ad9e0] [1] [5.02s]
-2026/03/19 05:14:05 [40] [CLIENT_DISCONNECTED] [unknown] [127.0.0.1] [Error: context canceled]
-2026/03/19 05:14:05 [40] [SESSION_TIMED_OUT] [94df984c-a28e-4119-b411-160cd51ad9e0]
-2026/03/19 05:14:05 [41] [SESSION_DELETED] [94df984c-a28e-4119-b411-160cd51ad9e0]
-2026/03/19 05:14:05 Stopping HTTPTest Service...
-2026/03/19 05:14:05 HTTPTest Service stopped...
-2026/03/19 05:14:05 [38] [LOG_ERROR] [Failed to rename /tmp/selenoid-test1295095611/selenoid72926cfff3d28a18dcfc137b0f9dcad3.log to /tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.log: rename /tmp/selenoid-test1295095611/selenoid72926cfff3d28a18dcfc137b0f9dcad3.log /tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.log: no such file or directory]
---- PASS: TestProxySessionCanceled (6.02s)
+2026/03/19 05:19:35 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:35 Starting HTTPTest Service...
+2026/03/19 05:19:35 HTTPTest Service started...
+2026/03/19 05:19:35 [33] [SESSION_ATTEMPTED] [http://127.0.0.1:38775] [1]
+2026/03/19 05:19:35 [33] [DEBUG] driverSessionId: 2a8f7abe-55fd-4db6-ab46-cd78b34ac749, connecting to devtoolsHost: 127.0.0.1:38775
+2026/03/19 05:19:35 [33] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:35 [33] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+2026/03/19 05:19:35 [34] [DEBUG] Translated path: /session/77777777-7777-7777-7777-777777777777/url -> /session/2a8f7abe-55fd-4db6-ab46-cd78b34ac749/url
+2026/03/19 05:19:36 [34] [CLIENT_DISCONNECTED] [unknown] [127.0.0.1] [Error: context canceled]
+2026/03/19 05:19:36 [34] [SESSION_TIMED_OUT] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:36 [35] [SESSION_DELETED] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:36 [35] [DEBUG] Translated path: /session/77777777-7777-7777-7777-777777777777 -> /session/2a8f7abe-55fd-4db6-ab46-cd78b34ac749
+2026/03/19 05:19:36 Stopping HTTPTest Service...
+2026/03/19 05:19:36 HTTPTest Service stopped...
+2026/03/19 05:19:36 HTTPTest Service stopped...
+2026/03/19 05:19:36 [33] [LOG_ERROR] [Failed to rename /tmp/selenoid-test1698420002/selenoid479a8562f4185586126656378b3df3da.log to /tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.log: rename /tmp/selenoid-test1698420002/selenoid479a8562f4185586126656378b3df3da.log /tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.log: no such file or directory]
+--- PASS: TestProxySessionCanceled (1.00s)
 === RUN   TestNewSessionTimeout
-2026/03/19 05:14:05 [38] [METADATA] [61678fea32d5dbe8163fe1d1d9472c3f] [/tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.json]
-2026/03/19 05:14:05 [38] [UPLOADING_FILE] [/tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.json] [Failed to upload: S3 uploader is not initialized]
-2026/03/19 05:14:05 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:14:05 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:14:05 Starting HTTPTest Service...
-2026/03/19 05:14:05 HTTPTest Service started...
-2026/03/19 05:14:05 [42] [SESSION_ATTEMPTED] [http://127.0.0.1:38967] [1]
-2026/03/19 05:14:05 [42] [DEBUG] driverSessionId: a93c7ff8-181b-4a89-9d9e-4e61f9027d09, connecting to devtoolsHost: 127.0.0.1:38967
-2026/03/19 05:14:05 [42] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:38967/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:05 [42] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:38967/json failed (body: test-clipboard-value)
-2026/03/19 05:14:06 [42] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:38967/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:06 [42] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:38967/json failed (body: test-clipboard-value)
-2026/03/19 05:14:07 [42] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:38967/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:07 [42] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:38967/json failed (body: test-clipboard-value)
-2026/03/19 05:14:07 [42] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:38967/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:07 [42] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:38967/json failed (body: test-clipboard-value)
-2026/03/19 05:14:08 [42] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:38967/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:08 [42] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:38967/json failed (body: test-clipboard-value)
-2026/03/19 05:14:08 [42] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:38967/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:08 [42] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:38967/json failed (body: test-clipboard-value)
-2026/03/19 05:14:09 [42] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:38967/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:09 [42] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:38967/json failed (body: test-clipboard-value)
-2026/03/19 05:14:09 [42] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:38967/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:09 [42] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:38967/json failed (body: test-clipboard-value)
-2026/03/19 05:14:10 [42] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:38967/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:10 [42] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:38967/json failed (body: test-clipboard-value)
-2026/03/19 05:14:10 [42] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:38967/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:10 [42] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:38967/json failed (body: test-clipboard-value)
-2026/03/19 05:14:11 [42] [SESSION_CREATED] [a93c7ff8-181b-4a89-9d9e-4e61f9027d09] [1] [5.02s]
-2026/03/19 05:14:11 [42] [SESSION_TIMED_OUT] [a93c7ff8-181b-4a89-9d9e-4e61f9027d09]
-2026/03/19 05:14:11 [43] [SESSION_DELETED] [a93c7ff8-181b-4a89-9d9e-4e61f9027d09]
-2026/03/19 05:14:11 Stopping HTTPTest Service...
-2026/03/19 05:14:11 HTTPTest Service stopped...
-2026/03/19 05:14:11 [42] [LOG_ERROR] [Failed to rename /tmp/selenoid-test1295095611/selenoid83d710363d1b2159504fdbbcef8e16ac.log to /tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.log: rename /tmp/selenoid-test1295095611/selenoid83d710363d1b2159504fdbbcef8e16ac.log /tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.log: no such file or directory]
-2026/03/19 05:14:11 [42] [METADATA] [61678fea32d5dbe8163fe1d1d9472c3f] [/tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.json]
-2026/03/19 05:14:11 [42] [UPLOADING_FILE] [/tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.json] [Failed to upload: S3 uploader is not initialized]
---- PASS: TestNewSessionTimeout (5.07s)
+2026/03/19 05:19:36 [33] [METADATA] [61678fea32d5dbe8163fe1d1d9472c3f] [/tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.json]
+2026/03/19 05:19:36 [33] [UPLOADING_FILE] [/tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.json] [Failed to upload: S3 uploader is not initialized]
+2026/03/19 05:19:36 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:36 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:36 Starting HTTPTest Service...
+2026/03/19 05:19:36 HTTPTest Service started...
+2026/03/19 05:19:36 [36] [SESSION_ATTEMPTED] [http://127.0.0.1:35765] [1]
+2026/03/19 05:19:36 [36] [DEBUG] driverSessionId: 2f6d0594-f9c4-401d-93c2-68b56a84e645, connecting to devtoolsHost: 127.0.0.1:35765
+2026/03/19 05:19:36 [36] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:36 [36] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+2026/03/19 05:19:36 [36] [SESSION_TIMED_OUT] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:37 [37] [SESSION_DELETED] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:37 [37] [DEBUG] Translated path: /session/77777777-7777-7777-7777-777777777777 -> /session/2f6d0594-f9c4-401d-93c2-68b56a84e645
+2026/03/19 05:19:37 Stopping HTTPTest Service...
+2026/03/19 05:19:37 HTTPTest Service stopped...
+2026/03/19 05:19:37 [36] [LOG_ERROR] [Failed to rename /tmp/selenoid-test1698420002/selenoid12a6e403b675b46bcfa03dbd172b5a09.log to /tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.log: rename /tmp/selenoid-test1698420002/selenoid12a6e403b675b46bcfa03dbd172b5a09.log /tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.log: no such file or directory]
+2026/03/19 05:19:37 [36] [METADATA] [61678fea32d5dbe8163fe1d1d9472c3f] [/tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.json]
+2026/03/19 05:19:37 [36] [UPLOADING_FILE] [/tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.json] [Failed to upload: S3 uploader is not initialized]
+--- PASS: TestNewSessionTimeout (0.05s)
 === RUN   TestProxySessionTimeout
-2026/03/19 05:14:11 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:14:11 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:14:11 Starting HTTPTest Service...
-2026/03/19 05:14:11 HTTPTest Service started...
-2026/03/19 05:14:11 [44] [SESSION_ATTEMPTED] [http://127.0.0.1:36611] [1]
-2026/03/19 05:14:11 [44] [DEBUG] driverSessionId: db03b75a-95a1-4807-81a7-a588f2cc8ddc, connecting to devtoolsHost: 127.0.0.1:36611
-2026/03/19 05:14:11 [44] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:36611/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:11 [44] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:36611/json failed (body: test-clipboard-value)
-2026/03/19 05:14:11 [44] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:36611/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:11 [44] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:36611/json failed (body: test-clipboard-value)
-2026/03/19 05:14:12 [44] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:36611/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:12 [44] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:36611/json failed (body: test-clipboard-value)
-2026/03/19 05:14:12 [44] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:36611/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:12 [44] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:36611/json failed (body: test-clipboard-value)
-2026/03/19 05:14:13 [44] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:36611/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:13 [44] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:36611/json failed (body: test-clipboard-value)
-2026/03/19 05:14:13 [44] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:36611/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:13 [44] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:36611/json failed (body: test-clipboard-value)
-2026/03/19 05:14:14 [44] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:36611/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:14 [44] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:36611/json failed (body: test-clipboard-value)
-2026/03/19 05:14:14 [44] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:36611/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:14 [44] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:36611/json failed (body: test-clipboard-value)
-2026/03/19 05:14:15 [44] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:36611/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:15 [44] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:36611/json failed (body: test-clipboard-value)
-2026/03/19 05:14:15 [44] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:36611/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:15 [44] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:36611/json failed (body: test-clipboard-value)
-2026/03/19 05:14:16 [44] [SESSION_CREATED] [db03b75a-95a1-4807-81a7-a588f2cc8ddc] [1] [5.02s]
-2026/03/19 05:14:16 [45] [SESSION_TIMED_OUT] [db03b75a-95a1-4807-81a7-a588f2cc8ddc]
-2026/03/19 05:14:16 [46] [SESSION_DELETED] [db03b75a-95a1-4807-81a7-a588f2cc8ddc]
-2026/03/19 05:14:16 Stopping HTTPTest Service...
-2026/03/19 05:14:16 HTTPTest Service stopped...
-2026/03/19 05:14:16 [44] [LOG_ERROR] [Failed to rename /tmp/selenoid-test1295095611/selenoid07fbcf31c883bd8ac3e92d9960f6078c.log to /tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.log: rename /tmp/selenoid-test1295095611/selenoid07fbcf31c883bd8ac3e92d9960f6078c.log /tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.log: no such file or directory]
-2026/03/19 05:14:16 [44] [METADATA] [61678fea32d5dbe8163fe1d1d9472c3f] [/tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.json]
-2026/03/19 05:14:16 [44] [UPLOADING_FILE] [/tmp/selenoid-test1295095611/61678fea32d5dbe8163fe1d1d9472c3f.json] [Failed to upload: S3 uploader is not initialized]
---- PASS: TestProxySessionTimeout (5.11s)
+2026/03/19 05:19:37 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 Starting HTTPTest Service...
+2026/03/19 05:19:37 HTTPTest Service started...
+2026/03/19 05:19:37 [38] [SESSION_ATTEMPTED] [http://127.0.0.1:39373] [1]
+2026/03/19 05:19:37 [38] [DEBUG] driverSessionId: e6248ffb-37c1-45ed-8225-6f5acf5d2392, connecting to devtoolsHost: 127.0.0.1:39373
+2026/03/19 05:19:37 [38] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:37 [38] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+2026/03/19 05:19:37 [39] [DEBUG] Translated path: /session/77777777-7777-7777-7777-777777777777/url -> /session/e6248ffb-37c1-45ed-8225-6f5acf5d2392/url
+2026/03/19 05:19:37 [39] [SESSION_TIMED_OUT] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:37 [40] [SESSION_DELETED] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:37 [40] [DEBUG] Translated path: /session/77777777-7777-7777-7777-777777777777 -> /session/e6248ffb-37c1-45ed-8225-6f5acf5d2392
+2026/03/19 05:19:37 Stopping HTTPTest Service...
+2026/03/19 05:19:37 HTTPTest Service stopped...
+2026/03/19 05:19:37 [38] [LOG_ERROR] [Failed to rename /tmp/selenoid-test1698420002/selenoid0d7019583c11249914c83ffcc248e6d4.log to /tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.log: rename /tmp/selenoid-test1698420002/selenoid0d7019583c11249914c83ffcc248e6d4.log /tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.log: no such file or directory]
+2026/03/19 05:19:37 [38] [METADATA] [61678fea32d5dbe8163fe1d1d9472c3f] [/tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.json]
+2026/03/19 05:19:37 [38] [UPLOADING_FILE] [/tmp/selenoid-test1698420002/61678fea32d5dbe8163fe1d1d9472c3f.json] [Failed to upload: S3 uploader is not initialized]
+--- PASS: TestProxySessionTimeout (0.10s)
 === RUN   TestFileUpload
-2026/03/19 05:14:16 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:14:16 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:14:16 Starting HTTPTest Service...
-2026/03/19 05:14:16 HTTPTest Service started...
-2026/03/19 05:14:16 [47] [SESSION_ATTEMPTED] [http://127.0.0.1:38519] [1]
-2026/03/19 05:14:16 [47] [DEBUG] driverSessionId: aaf4e538-ed8b-4987-9c2d-cd5ad1618816, connecting to devtoolsHost: 127.0.0.1:38519
-2026/03/19 05:14:16 [47] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:38519/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:16 [47] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:38519/json failed (body: test-clipboard-value)
-2026/03/19 05:14:16 [47] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:38519/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:16 [47] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:38519/json failed (body: test-clipboard-value)
-2026/03/19 05:14:17 [47] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:38519/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:17 [47] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:38519/json failed (body: test-clipboard-value)
-2026/03/19 05:14:17 [47] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:38519/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:17 [47] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:38519/json failed (body: test-clipboard-value)
-2026/03/19 05:14:18 [47] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:38519/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:18 [47] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:38519/json failed (body: test-clipboard-value)
-2026/03/19 05:14:18 [47] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:38519/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:18 [47] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:38519/json failed (body: test-clipboard-value)
-2026/03/19 05:14:19 [47] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:38519/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:19 [47] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:38519/json failed (body: test-clipboard-value)
-2026/03/19 05:14:19 [47] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:38519/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:19 [47] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:38519/json failed (body: test-clipboard-value)
-2026/03/19 05:14:20 [47] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:38519/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:20 [47] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:38519/json failed (body: test-clipboard-value)
-2026/03/19 05:14:20 [47] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:38519/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:20 [47] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:38519/json failed (body: test-clipboard-value)
-2026/03/19 05:14:21 [47] [SESSION_CREATED] [aaf4e538-ed8b-4987-9c2d-cd5ad1618816] [1] [5.02s]
---- PASS: TestFileUpload (5.02s)
+2026/03/19 05:19:37 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 Starting HTTPTest Service...
+2026/03/19 05:19:37 HTTPTest Service started...
+2026/03/19 05:19:37 [41] [SESSION_ATTEMPTED] [http://127.0.0.1:40401] [1]
+2026/03/19 05:19:37 [41] [DEBUG] driverSessionId: 94f1190f-d67b-42ef-bcaa-9e66f505db9a, connecting to devtoolsHost: 127.0.0.1:40401
+2026/03/19 05:19:37 [41] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:37 [41] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+--- PASS: TestFileUpload (0.01s)
 === RUN   TestFileUploadBadJson
-2026/03/19 05:14:21 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:14:21 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:14:21 Starting HTTPTest Service...
-2026/03/19 05:14:21 HTTPTest Service started...
-2026/03/19 05:14:21 [50] [SESSION_ATTEMPTED] [http://127.0.0.1:46183] [1]
-2026/03/19 05:14:21 [50] [DEBUG] driverSessionId: e77f21de-e361-4a23-b476-d6bd59822821, connecting to devtoolsHost: 127.0.0.1:46183
-2026/03/19 05:14:21 [50] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:46183/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:21 [50] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:46183/json failed (body: test-clipboard-value)
-2026/03/19 05:14:21 [49] [SESSION_TIMED_OUT] [aaf4e538-ed8b-4987-9c2d-cd5ad1618816]
-2026/03/19 05:14:21 [49] [DELETE_FAILED] [aaf4e538-ed8b-4987-9c2d-cd5ad1618816] [404 Not Found]
-2026/03/19 05:14:21 [50] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:46183/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:21 [50] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:46183/json failed (body: test-clipboard-value)
-2026/03/19 05:14:22 [50] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:46183/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:22 [50] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:46183/json failed (body: test-clipboard-value)
-2026/03/19 05:14:22 [50] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:46183/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:22 [50] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:46183/json failed (body: test-clipboard-value)
-2026/03/19 05:14:23 [50] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:46183/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:23 [50] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:46183/json failed (body: test-clipboard-value)
-2026/03/19 05:14:23 [50] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:46183/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:23 [50] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:46183/json failed (body: test-clipboard-value)
-2026/03/19 05:14:24 [50] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:46183/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:24 [50] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:46183/json failed (body: test-clipboard-value)
-2026/03/19 05:14:24 [50] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:46183/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:24 [50] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:46183/json failed (body: test-clipboard-value)
-2026/03/19 05:14:25 [50] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:46183/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:25 [50] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:46183/json failed (body: test-clipboard-value)
-2026/03/19 05:14:25 [50] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:46183/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:25 [50] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:46183/json failed (body: test-clipboard-value)
-2026/03/19 05:14:26 [50] [SESSION_CREATED] [e77f21de-e361-4a23-b476-d6bd59822821] [1] [5.02s]
---- PASS: TestFileUploadBadJson (5.02s)
+2026/03/19 05:19:37 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 Starting HTTPTest Service...
+2026/03/19 05:19:37 HTTPTest Service started...
+2026/03/19 05:19:37 [44] [SESSION_ATTEMPTED] [http://127.0.0.1:34725] [1]
+2026/03/19 05:19:37 [44] [DEBUG] driverSessionId: ff893016-4d05-482c-8741-483d4db18a11, connecting to devtoolsHost: 127.0.0.1:34725
+2026/03/19 05:19:37 [44] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:37 [44] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+--- PASS: TestFileUploadBadJson (0.00s)
 === RUN   TestFileUploadNoFile
-2026/03/19 05:14:26 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:14:26 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:14:26 Starting HTTPTest Service...
-2026/03/19 05:14:26 HTTPTest Service started...
-2026/03/19 05:14:26 [53] [SESSION_ATTEMPTED] [http://127.0.0.1:39539] [1]
-2026/03/19 05:14:26 [53] [DEBUG] driverSessionId: a43ec245-ef62-4783-b70a-d8c92d549f0f, connecting to devtoolsHost: 127.0.0.1:39539
-2026/03/19 05:14:26 [53] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:39539/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:26 [53] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:39539/json failed (body: test-clipboard-value)
-2026/03/19 05:14:26 [52] [SESSION_TIMED_OUT] [e77f21de-e361-4a23-b476-d6bd59822821]
-2026/03/19 05:14:26 [52] [DELETE_FAILED] [e77f21de-e361-4a23-b476-d6bd59822821] [404 Not Found]
-2026/03/19 05:14:26 [53] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:39539/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:26 [53] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:39539/json failed (body: test-clipboard-value)
-2026/03/19 05:14:27 [53] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:39539/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:27 [53] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:39539/json failed (body: test-clipboard-value)
-2026/03/19 05:14:27 [53] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:39539/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:27 [53] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:39539/json failed (body: test-clipboard-value)
-2026/03/19 05:14:28 [53] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:39539/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:28 [53] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:39539/json failed (body: test-clipboard-value)
-2026/03/19 05:14:28 [53] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:39539/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:28 [53] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:39539/json failed (body: test-clipboard-value)
-2026/03/19 05:14:29 [53] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:39539/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:29 [53] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:39539/json failed (body: test-clipboard-value)
-2026/03/19 05:14:29 [53] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:39539/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:29 [53] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:39539/json failed (body: test-clipboard-value)
-2026/03/19 05:14:30 [53] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:39539/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:30 [53] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:39539/json failed (body: test-clipboard-value)
-2026/03/19 05:14:30 [53] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:39539/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:30 [53] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:39539/json failed (body: test-clipboard-value)
-2026/03/19 05:14:31 [53] [SESSION_CREATED] [a43ec245-ef62-4783-b70a-d8c92d549f0f] [1] [5.02s]
---- PASS: TestFileUploadNoFile (5.02s)
+2026/03/19 05:19:37 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 Starting HTTPTest Service...
+2026/03/19 05:19:37 HTTPTest Service started...
+2026/03/19 05:19:37 [46] [SESSION_ATTEMPTED] [http://127.0.0.1:45289] [1]
+2026/03/19 05:19:37 [46] [DEBUG] driverSessionId: a795ac9b-37bd-40aa-8100-254634396816, connecting to devtoolsHost: 127.0.0.1:45289
+2026/03/19 05:19:37 [46] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:37 [46] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+--- PASS: TestFileUploadNoFile (0.00s)
 === RUN   TestFileUploadTwoFiles
-2026/03/19 05:14:31 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:14:31 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:14:31 Starting HTTPTest Service...
-2026/03/19 05:14:31 HTTPTest Service started...
-2026/03/19 05:14:31 [56] [SESSION_ATTEMPTED] [http://127.0.0.1:42879] [1]
-2026/03/19 05:14:31 [56] [DEBUG] driverSessionId: cae11f98-5152-483a-a15e-4f8ee8622ace, connecting to devtoolsHost: 127.0.0.1:42879
-2026/03/19 05:14:31 [56] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:42879/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:31 [56] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:42879/json failed (body: test-clipboard-value)
-2026/03/19 05:14:31 [55] [SESSION_TIMED_OUT] [a43ec245-ef62-4783-b70a-d8c92d549f0f]
-2026/03/19 05:14:31 [55] [DELETE_FAILED] [a43ec245-ef62-4783-b70a-d8c92d549f0f] [404 Not Found]
-2026/03/19 05:14:31 [56] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:42879/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:31 [56] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:42879/json failed (body: test-clipboard-value)
-2026/03/19 05:14:32 [56] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:42879/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:32 [56] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:42879/json failed (body: test-clipboard-value)
-2026/03/19 05:14:32 [56] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:42879/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:32 [56] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:42879/json failed (body: test-clipboard-value)
-2026/03/19 05:14:33 [56] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:42879/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:33 [56] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:42879/json failed (body: test-clipboard-value)
-2026/03/19 05:14:33 [56] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:42879/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:33 [56] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:42879/json failed (body: test-clipboard-value)
-2026/03/19 05:14:34 [56] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:42879/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:34 [56] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:42879/json failed (body: test-clipboard-value)
-2026/03/19 05:14:34 [56] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:42879/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:34 [56] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:42879/json failed (body: test-clipboard-value)
-2026/03/19 05:14:35 [56] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:42879/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:35 [56] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:42879/json failed (body: test-clipboard-value)
-2026/03/19 05:14:35 [56] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:42879/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:35 [56] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:42879/json failed (body: test-clipboard-value)
-2026/03/19 05:14:36 [56] [SESSION_CREATED] [cae11f98-5152-483a-a15e-4f8ee8622ace] [1] [5.02s]
---- PASS: TestFileUploadTwoFiles (5.02s)
+2026/03/19 05:19:37 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 Starting HTTPTest Service...
+2026/03/19 05:19:37 HTTPTest Service started...
+2026/03/19 05:19:37 [48] [SESSION_ATTEMPTED] [http://127.0.0.1:46243] [1]
+2026/03/19 05:19:37 [48] [DEBUG] driverSessionId: e740c2ea-0bd1-41e1-b823-d28df5c59ddc, connecting to devtoolsHost: 127.0.0.1:46243
+2026/03/19 05:19:37 [48] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:37 [48] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+--- PASS: TestFileUploadTwoFiles (0.00s)
 === RUN   TestPing
 --- PASS: TestPing (0.00s)
 === RUN   TestStatus
 --- PASS: TestStatus (0.00s)
 === RUN   TestServeAndDeleteVideoFile
-2026/03/19 05:14:36 [59] [VIDEO_LISTING] [unknown] [127.0.0.1]
-2026/03/19 05:14:36 [61] [DELETED_VIDEO_FILE] [unknown] [127.0.0.1] [testfile]
+2026/03/19 05:19:37 [50] [VIDEO_LISTING] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 [52] [DELETED_VIDEO_FILE] [unknown] [127.0.0.1] [testfile]
 --- PASS: TestServeAndDeleteVideoFile (0.00s)
 === RUN   TestServeAndDeleteLogFile
-2026/03/19 05:14:36 [63] [LOG_LISTING] [unknown] [127.0.0.1]
-2026/03/19 05:14:36 [65] [DELETED_LOG_FILE] [unknown] [127.0.0.1] [logfile.log]
+2026/03/19 05:19:37 [54] [LOG_LISTING] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 [56] [DELETED_LOG_FILE] [unknown] [127.0.0.1] [logfile.log]
 --- PASS: TestServeAndDeleteLogFile (0.00s)
 === RUN   TestFileDownload
-2026/03/19 05:14:36 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:14:36 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:14:36 Starting HTTPTest Service...
-2026/03/19 05:14:36 HTTPTest Service started...
-2026/03/19 05:14:36 [67] [SESSION_ATTEMPTED] [http://127.0.0.1:45603] [1]
-2026/03/19 05:14:36 [67] [DEBUG] driverSessionId: 1f9dcc1e-d279-4057-8960-5b58299347d6, connecting to devtoolsHost: 127.0.0.1:45603
-2026/03/19 05:14:36 [67] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:45603/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:36 [67] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:45603/json failed (body: test-clipboard-value)
-2026/03/19 05:14:36 [58] [SESSION_TIMED_OUT] [cae11f98-5152-483a-a15e-4f8ee8622ace]
-2026/03/19 05:14:36 [58] [DELETE_FAILED] [cae11f98-5152-483a-a15e-4f8ee8622ace] [404 Not Found]
-2026/03/19 05:14:36 [67] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:45603/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:36 [67] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:45603/json failed (body: test-clipboard-value)
-2026/03/19 05:14:37 [67] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:45603/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:37 [67] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:45603/json failed (body: test-clipboard-value)
-2026/03/19 05:14:37 [67] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:45603/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:37 [67] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:45603/json failed (body: test-clipboard-value)
-2026/03/19 05:14:38 [67] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:45603/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:38 [67] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:45603/json failed (body: test-clipboard-value)
-2026/03/19 05:14:38 [67] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:45603/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:38 [67] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:45603/json failed (body: test-clipboard-value)
-2026/03/19 05:14:39 [67] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:45603/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:39 [67] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:45603/json failed (body: test-clipboard-value)
-2026/03/19 05:14:39 [67] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:45603/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:39 [67] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:45603/json failed (body: test-clipboard-value)
-2026/03/19 05:14:40 [67] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:45603/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:40 [67] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:45603/json failed (body: test-clipboard-value)
-2026/03/19 05:14:40 [67] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:45603/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:40 [67] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:45603/json failed (body: test-clipboard-value)
-2026/03/19 05:14:41 [67] [SESSION_CREATED] [1f9dcc1e-d279-4057-8960-5b58299347d6] [1] [5.02s]
-2026/03/19 05:14:41 [69] [DOWNLOADING_FILE] [1f9dcc1e-d279-4057-8960-5b58299347d6] [/testfile]
---- PASS: TestFileDownload (5.02s)
+2026/03/19 05:19:37 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 Starting HTTPTest Service...
+2026/03/19 05:19:37 HTTPTest Service started...
+2026/03/19 05:19:37 [58] [SESSION_ATTEMPTED] [http://127.0.0.1:45495] [1]
+2026/03/19 05:19:37 [58] [DEBUG] driverSessionId: 4b50207e-583b-411c-9633-28655a7d5990, connecting to devtoolsHost: 127.0.0.1:45495
+2026/03/19 05:19:37 [58] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:37 [58] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+2026/03/19 05:19:37 [59] [DOWNLOADING_FILE] [77777777-7777-7777-7777-777777777777] [/testfile]
+--- PASS: TestFileDownload (0.00s)
 === RUN   TestFileDownloadProtocolExtension
-2026/03/19 05:14:41 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:14:41 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:14:41 Starting HTTPTest Service...
-2026/03/19 05:14:41 HTTPTest Service started...
-2026/03/19 05:14:41 [70] [SESSION_ATTEMPTED] [http://127.0.0.1:35761] [1]
-2026/03/19 05:14:41 [70] [DEBUG] driverSessionId: 7631bd44-e00b-4b58-81a2-bbf8f1a19a2b, connecting to devtoolsHost: 127.0.0.1:35761
-2026/03/19 05:14:41 [70] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:35761/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:41 [70] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:35761/json failed (body: test-clipboard-value)
-2026/03/19 05:14:41 [69] [SESSION_TIMED_OUT] [1f9dcc1e-d279-4057-8960-5b58299347d6]
-2026/03/19 05:14:41 [69] [DELETE_FAILED] [1f9dcc1e-d279-4057-8960-5b58299347d6] [404 Not Found]
-2026/03/19 05:14:41 [70] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:35761/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:41 [70] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:35761/json failed (body: test-clipboard-value)
-2026/03/19 05:14:42 [70] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:35761/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:42 [70] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:35761/json failed (body: test-clipboard-value)
-2026/03/19 05:14:42 [70] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:35761/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:42 [70] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:35761/json failed (body: test-clipboard-value)
-2026/03/19 05:14:43 [70] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:35761/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:43 [70] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:35761/json failed (body: test-clipboard-value)
-2026/03/19 05:14:43 [70] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:35761/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:43 [70] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:35761/json failed (body: test-clipboard-value)
-2026/03/19 05:14:44 [70] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:35761/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:44 [70] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:35761/json failed (body: test-clipboard-value)
-2026/03/19 05:14:44 [70] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:35761/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:44 [70] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:35761/json failed (body: test-clipboard-value)
-2026/03/19 05:14:45 [70] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:35761/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:45 [70] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:35761/json failed (body: test-clipboard-value)
-2026/03/19 05:14:45 [70] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:35761/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:45 [70] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:35761/json failed (body: test-clipboard-value)
-2026/03/19 05:14:46 [70] [SESSION_CREATED] [7631bd44-e00b-4b58-81a2-bbf8f1a19a2b] [1] [5.02s]
-2026/03/19 05:14:46 [73] [DOWNLOADING_FILE] [7631bd44-e00b-4b58-81a2-bbf8f1a19a2b] [/testfile]
---- PASS: TestFileDownloadProtocolExtension (5.02s)
+2026/03/19 05:19:37 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 Starting HTTPTest Service...
+2026/03/19 05:19:37 HTTPTest Service started...
+2026/03/19 05:19:37 [60] [SESSION_ATTEMPTED] [http://127.0.0.1:40713] [1]
+2026/03/19 05:19:37 [60] [DEBUG] driverSessionId: f95927ed-62b5-4170-be7f-9dfd71b251f9, connecting to devtoolsHost: 127.0.0.1:40713
+2026/03/19 05:19:37 [60] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:37 [60] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+2026/03/19 05:19:37 [62] [DOWNLOADING_FILE] [77777777-7777-7777-7777-777777777777] [/testfile]
+--- PASS: TestFileDownloadProtocolExtension (0.00s)
 === RUN   TestFileDownloadMissingSession
-2026/03/19 05:14:46 [74] [SESSION_NOT_FOUND] [missing-session]
+2026/03/19 05:19:37 [63] [SESSION_NOT_FOUND] [missing-session]
 --- PASS: TestFileDownloadMissingSession (0.00s)
 === RUN   TestClipboard
-2026/03/19 05:14:46 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:14:46 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:14:46 Starting HTTPTest Service...
-2026/03/19 05:14:46 HTTPTest Service started...
-2026/03/19 05:14:46 [75] [SESSION_ATTEMPTED] [http://127.0.0.1:41427] [1]
-2026/03/19 05:14:46 [75] [DEBUG] driverSessionId: cf7c7ad3-c954-4893-a980-4f1dfa9d9a06, connecting to devtoolsHost: 127.0.0.1:41427
-2026/03/19 05:14:46 [75] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:41427/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:46 [75] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:41427/json failed (body: test-clipboard-value)
-2026/03/19 05:14:46 [73] [SESSION_TIMED_OUT] [7631bd44-e00b-4b58-81a2-bbf8f1a19a2b]
-2026/03/19 05:14:46 [73] [DELETE_FAILED] [7631bd44-e00b-4b58-81a2-bbf8f1a19a2b] [404 Not Found]
-2026/03/19 05:14:46 [75] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:41427/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:46 [75] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:41427/json failed (body: test-clipboard-value)
-2026/03/19 05:14:47 [75] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:41427/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:47 [75] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:41427/json failed (body: test-clipboard-value)
-2026/03/19 05:14:47 [75] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:41427/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:47 [75] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:41427/json failed (body: test-clipboard-value)
-2026/03/19 05:14:48 [75] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:41427/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:48 [75] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:41427/json failed (body: test-clipboard-value)
-2026/03/19 05:14:48 [75] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:41427/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:48 [75] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:41427/json failed (body: test-clipboard-value)
-2026/03/19 05:14:49 [75] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:41427/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:49 [75] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:41427/json failed (body: test-clipboard-value)
-2026/03/19 05:14:49 [75] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:41427/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:49 [75] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:41427/json failed (body: test-clipboard-value)
-2026/03/19 05:14:50 [75] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:41427/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:50 [75] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:41427/json failed (body: test-clipboard-value)
-2026/03/19 05:14:50 [75] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:41427/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:50 [75] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:41427/json failed (body: test-clipboard-value)
-2026/03/19 05:14:51 [75] [SESSION_CREATED] [cf7c7ad3-c954-4893-a980-4f1dfa9d9a06] [1] [5.02s]
-2026/03/19 05:14:51 [77] [CLIPBOARD] [cf7c7ad3-c954-4893-a980-4f1dfa9d9a06] [/]
-2026/03/19 05:14:51 [78] [CLIPBOARD] [cf7c7ad3-c954-4893-a980-4f1dfa9d9a06] [/]
---- PASS: TestClipboard (5.02s)
+2026/03/19 05:19:37 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
+2026/03/19 05:19:37 Starting HTTPTest Service...
+2026/03/19 05:19:37 HTTPTest Service started...
+2026/03/19 05:19:37 [64] [SESSION_ATTEMPTED] [http://127.0.0.1:38357] [1]
+2026/03/19 05:19:37 [64] [DEBUG] driverSessionId: 593c7652-d6c0-4ff2-801b-e3ae99acdec2, connecting to devtoolsHost: 127.0.0.1:38357
+2026/03/19 05:19:37 [64] [DEBUG] Mapped session ID to UUID: 77777777-7777-7777-7777-777777777777
+2026/03/19 05:19:37 [64] [SESSION_CREATED] [77777777-7777-7777-7777-777777777777] [1] [0.00s]
+2026/03/19 05:19:37 [65] [CLIPBOARD] [77777777-7777-7777-7777-777777777777] [/]
+2026/03/19 05:19:37 [66] [CLIPBOARD] [77777777-7777-7777-7777-777777777777] [/]
+2026/03/19 05:19:37 [43] [SESSION_TIMED_OUT] [77777777-7777-7777-7777-777777777777]
+--- PASS: TestClipboard (0.00s)
 === RUN   TestClipboardProtocolExtension
-2026/03/19 05:14:51 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:14:51 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:14:51 Starting HTTPTest Service...
-2026/03/19 05:14:51 HTTPTest Service started...
-2026/03/19 05:14:51 [79] [SESSION_ATTEMPTED] [http://127.0.0.1:44417] [1]
-2026/03/19 05:14:51 [79] [DEBUG] driverSessionId: 57676dba-f693-4d87-b2da-ec897ff44e2a, connecting to devtoolsHost: 127.0.0.1:44417
-2026/03/19 05:14:51 [79] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:44417/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:51 [79] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:44417/json failed (body: test-clipboard-value)
-2026/03/19 05:14:51 [78] [SESSION_TIMED_OUT] [cf7c7ad3-c954-4893-a980-4f1dfa9d9a06]
-2026/03/19 05:14:51 [78] [DELETE_FAILED] [cf7c7ad3-c954-4893-a980-4f1dfa9d9a06] [404 Not Found]
-2026/03/19 05:14:51 [79] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:44417/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:51 [79] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:44417/json failed (body: test-clipboard-value)
-2026/03/19 05:14:52 [79] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:44417/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:52 [79] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:44417/json failed (body: test-clipboard-value)
-2026/03/19 05:14:52 [79] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:44417/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:52 [79] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:44417/json failed (body: test-clipboard-value)
-2026/03/19 05:14:53 [79] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:44417/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:53 [79] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:44417/json failed (body: test-clipboard-value)
-2026/03/19 05:14:53 [79] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:44417/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:53 [79] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:44417/json failed (body: test-clipboard-value)
-2026/03/19 05:14:54 [79] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:44417/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:54 [79] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:44417/json failed (body: test-clipboard-value)
-2026/03/19 05:14:54 [79] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:44417/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:54 [79] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:44417/json failed (body: test-clipboard-value)
-2026/03/19 05:14:55 [79] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:44417/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:55 [79] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:44417/json failed (body: test-clipboard-value)
-2026/03/19 05:14:55 [79] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:44417/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:55 [79] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:44417/json failed (body: test-clipboard-value)
-2026/03/19 05:14:56 [79] [SESSION_CREATED] [57676dba-f693-4d87-b2da-ec897ff44e2a] [1] [5.02s]
-2026/03/19 05:14:56 [82] [CLIPBOARD] [57676dba-f693-4d87-b2da-ec897ff44e2a] [/]
-2026/03/19 05:14:56 [84] [CLIPBOARD] [57676dba-f693-4d87-b2da-ec897ff44e2a] [/]
---- PASS: TestClipboardProtocolExtension (5.02s)
-=== RUN   TestClipboardMissingSession
-2026/03/19 05:14:56 [85] [SESSION_NOT_FOUND] [missing-session]
---- PASS: TestClipboardMissingSession (0.00s)
-=== RUN   TestDevtools
-2026/03/19 05:14:56 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:14:56 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:14:56 Starting HTTPTest Service...
-2026/03/19 05:14:56 HTTPTest Service started...
-2026/03/19 05:14:56 [86] [SESSION_ATTEMPTED] [http://127.0.0.1:41927] [1]
-2026/03/19 05:14:56 [86] [DEBUG] driverSessionId: a6a39bae-af6c-4600-bae3-d9a77f7e277e, connecting to devtoolsHost: 127.0.0.1:41927
-2026/03/19 05:14:56 [86] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:41927/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:56 [86] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:41927/json failed (body: test-clipboard-value)
-2026/03/19 05:14:56 [84] [SESSION_TIMED_OUT] [57676dba-f693-4d87-b2da-ec897ff44e2a]
-2026/03/19 05:14:56 [84] [DELETE_FAILED] [57676dba-f693-4d87-b2da-ec897ff44e2a] [404 Not Found]
-2026/03/19 05:14:56 [86] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:41927/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:56 [86] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:41927/json failed (body: test-clipboard-value)
-2026/03/19 05:14:57 [86] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:41927/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:57 [86] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:41927/json failed (body: test-clipboard-value)
-2026/03/19 05:14:57 [86] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:41927/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:57 [86] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:41927/json failed (body: test-clipboard-value)
-2026/03/19 05:14:58 [86] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:41927/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:58 [86] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:41927/json failed (body: test-clipboard-value)
-2026/03/19 05:14:58 [86] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:41927/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:58 [86] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:41927/json failed (body: test-clipboard-value)
-2026/03/19 05:14:59 [86] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:41927/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:59 [86] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:41927/json failed (body: test-clipboard-value)
-2026/03/19 05:14:59 [86] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:41927/json/version failed (body: test-clipboard-value)
-2026/03/19 05:14:59 [86] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:41927/json failed (body: test-clipboard-value)
-2026/03/19 05:15:00 [86] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:41927/json/version failed (body: test-clipboard-value)
-2026/03/19 05:15:00 [86] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:41927/json failed (body: test-clipboard-value)
-2026/03/19 05:15:00 [86] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:41927/json/version failed (body: test-clipboard-value)
-2026/03/19 05:15:00 [86] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:41927/json failed (body: test-clipboard-value)
-2026/03/19 05:15:01 [86] [SESSION_CREATED] [a6a39bae-af6c-4600-bae3-d9a77f7e277e] [1] [5.02s]
-2026/03/19 05:15:01 [88] [DEVTOOLS] [a6a39bae-af6c-4600-bae3-d9a77f7e277e] [/]
-2026/03/19 05:15:01 http: response.WriteHeader on hijacked connection from github.com/aerokube/selenoid.Selenium.func5 (utils_test.go:185)
---- PASS: TestDevtools (5.02s)
-2026/03/19 05:15:01 http: response.Write on hijacked connection from github.com/aerokube/selenoid.Selenium.func5 (utils_test.go:186)
-=== RUN   TestAddedSeCdpCapability
-2026/03/19 05:15:01 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:15:01 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:15:01 Starting HTTPTest Service...
-2026/03/19 05:15:01 HTTPTest Service started...
-2026/03/19 05:15:01 [89] [SESSION_ATTEMPTED] [http://127.0.0.1:36769] [1]
-2026/03/19 05:15:01 [89] [DEBUG] driverSessionId: 6cf6e1e7-3fc4-455e-9a8c-095618441331, connecting to devtoolsHost: 127.0.0.1:36769
-2026/03/19 05:15:01 [89] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:36769/json/version failed (body: test-clipboard-value)
-2026/03/19 05:15:01 [89] [DEBUG] fetchDevtoolsUUID attempt 0 at http://127.0.0.1:36769/json failed (body: test-clipboard-value)
-2026/03/19 05:15:01 [88] [SESSION_TIMED_OUT] [a6a39bae-af6c-4600-bae3-d9a77f7e277e]
-2026/03/19 05:15:01 [88] [DELETE_FAILED] [a6a39bae-af6c-4600-bae3-d9a77f7e277e] [404 Not Found]
-2026/03/19 05:15:01 [89] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:36769/json/version failed (body: test-clipboard-value)
-2026/03/19 05:15:01 [89] [DEBUG] fetchDevtoolsUUID attempt 1 at http://127.0.0.1:36769/json failed (body: test-clipboard-value)
-2026/03/19 05:15:02 [89] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:36769/json/version failed (body: test-clipboard-value)
-2026/03/19 05:15:02 [89] [DEBUG] fetchDevtoolsUUID attempt 2 at http://127.0.0.1:36769/json failed (body: test-clipboard-value)
-2026/03/19 05:15:02 [89] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:36769/json/version failed (body: test-clipboard-value)
-2026/03/19 05:15:02 [89] [DEBUG] fetchDevtoolsUUID attempt 3 at http://127.0.0.1:36769/json failed (body: test-clipboard-value)
-2026/03/19 05:15:03 [89] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:36769/json/version failed (body: test-clipboard-value)
-2026/03/19 05:15:03 [89] [DEBUG] fetchDevtoolsUUID attempt 4 at http://127.0.0.1:36769/json failed (body: test-clipboard-value)
-2026/03/19 05:15:03 [89] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:36769/json/version failed (body: test-clipboard-value)
-2026/03/19 05:15:03 [89] [DEBUG] fetchDevtoolsUUID attempt 5 at http://127.0.0.1:36769/json failed (body: test-clipboard-value)
-2026/03/19 05:15:04 [89] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:36769/json/version failed (body: test-clipboard-value)
-2026/03/19 05:15:04 [89] [DEBUG] fetchDevtoolsUUID attempt 6 at http://127.0.0.1:36769/json failed (body: test-clipboard-value)
-2026/03/19 05:15:04 [89] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:36769/json/version failed (body: test-clipboard-value)
-2026/03/19 05:15:04 [89] [DEBUG] fetchDevtoolsUUID attempt 7 at http://127.0.0.1:36769/json failed (body: test-clipboard-value)
-2026/03/19 05:15:05 [89] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:36769/json/version failed (body: test-clipboard-value)
-2026/03/19 05:15:05 [89] [DEBUG] fetchDevtoolsUUID attempt 8 at http://127.0.0.1:36769/json failed (body: test-clipboard-value)
-2026/03/19 05:15:05 [89] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:36769/json/version failed (body: test-clipboard-value)
-2026/03/19 05:15:05 [89] [DEBUG] fetchDevtoolsUUID attempt 9 at http://127.0.0.1:36769/json failed (body: test-clipboard-value)
-2026/03/19 05:15:06 [89] [SESSION_CREATED] [6cf6e1e7-3fc4-455e-9a8c-095618441331] [1] [5.02s]
-2026/03/19 05:15:06 [91] [DEVTOOLS] [6cf6e1e7-3fc4-455e-9a8c-095618441331] [/]
-2026/03/19 05:15:06 http: response.WriteHeader on hijacked connection from github.com/aerokube/selenoid.Selenium.func5 (utils_test.go:185)
---- PASS: TestAddedSeCdpCapability (5.02s)
-2026/03/19 05:15:06 http: response.Write on hijacked connection from github.com/aerokube/selenoid.Selenium.func5 (utils_test.go:186)
-=== RUN   TestParseGgrHost
-2026/03/19 05:15:06 [-] [INIT] [Will prefix all session IDs with a hash-sum: 61678fea32d5dbe8163fe1d1d9472c3f]
---- PASS: TestParseGgrHost (0.00s)
-=== RUN   TestWelcomeScreen
---- PASS: TestWelcomeScreen (0.00s)
-=== RUN   TestFindOutsideOfDocker
-2026/03/19 05:15:06 [42] [LOCATING_SERVICE] [firefox] [33.0]
-2026/03/19 05:15:06 [42] [USING_DOCKER] [firefox] [33.0]
-2026/03/19 05:15:06 [42] [CREATING_CONTAINER] [selenoid/firefox:33.0]
-2026/03/19 05:15:06 [42] [STARTING_CONTAINER] [selenoid/firefox:33.0] [e90e34656806]
-2026/03/19 05:15:06 [42] [CONTAINER_STARTED] [selenoid/firefox:33.0] [e90e34656806] [0.00s]
-2026/03/19 05:15:06 [42] [CREATING_VIDEO_CONTAINER] [aerokube/video-recorder]
-2026/03/19 05:15:06 [42] [STARTING_VIDEO_CONTAINER] [aerokube/video-recorder] [e90e34656806]
-2026/03/19 05:15:06 [42] [VIDEO_CONTAINER_STARTED] [aerokube/video-recorder] [e90e34656806] [0.00s]
-2026/03/19 05:15:06 [42] [SERVICE_STARTED] [selenoid/firefox:33.0] [e90e34656806] [0.00s]
-2026/03/19 05:15:06 [42] [PROXY_TO] [e90e34656806] [http://127.0.0.1:43839]
-2026/03/19 05:15:06 [42] [STOPPING_VIDEO_CONTAINER] [e90e34656806]
-2026/03/19 05:15:06 [42] [REMOVING_CONTAINER] [e90e34656806]
-Error: response from daemon: 404 page not found]
-2026/03/19 05:15:06 [42] [REMOVING_CONTAINER] [e90e34656806]
-Error: response from daemon: 404 page not found]
---- PASS: TestFindOutsideOfDocker (0.02s)
-=== RUN   TestFindInsideOfDocker
-2026/03/19 05:15:06 [42] [LOCATING_SERVICE] [firefox] [33.0]
-2026/03/19 05:15:06 [42] [USING_DOCKER] [firefox] [33.0]
-2026/03/19 05:15:06 [42] [CREATING_CONTAINER] [selenoid/firefox:33.0]
-2026/03/19 05:15:06 [42] [STARTING_CONTAINER] [selenoid/firefox:33.0] [e90e34656806]
-2026/03/19 05:15:06 [42] [CONTAINER_STARTED] [selenoid/firefox:33.0] [e90e34656806] [0.00s]
-2026/03/19 05:15:06 [42] [CREATING_VIDEO_CONTAINER] [aerokube/video-recorder]
-2026/03/19 05:15:06 [42] [STARTING_VIDEO_CONTAINER] [aerokube/video-recorder] [e90e34656806]
-2026/03/19 05:15:06 [42] [VIDEO_CONTAINER_STARTED] [aerokube/video-recorder] [e90e34656806] [0.00s]
-2026/03/19 05:15:06 [42] [SERVICE_STARTED] [selenoid/firefox:33.0] [e90e34656806] [0.00s]
-2026/03/19 05:15:06 [42] [PROXY_TO] [e90e34656806] [http://127.0.0.1:43839]
-2026/03/19 05:15:06 [42] [STOPPING_VIDEO_CONTAINER] [e90e34656806]
-2026/03/19 05:15:06 [42] [REMOVING_CONTAINER] [e90e34656806]
-Error: response from daemon: 404 page not found]
-2026/03/19 05:15:06 [42] [REMOVING_CONTAINER] [e90e34656806]
-Error: response from daemon: 404 page not found]
---- PASS: TestFindInsideOfDocker (0.01s)
-=== RUN   TestFindDockerIPSpecified
-2026/03/19 05:15:06 [42] [LOCATING_SERVICE] [firefox] [33.0]
-2026/03/19 05:15:06 [42] [USING_DOCKER] [firefox] [33.0]
-2026/03/19 05:15:06 [42] [CREATING_CONTAINER] [selenoid/firefox:33.0]
-2026/03/19 05:15:06 [91] [SESSION_TIMED_OUT] [6cf6e1e7-3fc4-455e-9a8c-095618441331]
-2026/03/19 05:15:06 [42] [STARTING_CONTAINER] [selenoid/firefox:33.0] [e90e34656806]
-2026/03/19 05:15:06 [42] [CONTAINER_STARTED] [selenoid/firefox:33.0] [e90e34656806] [0.00s]
-2026/03/19 05:15:06 [91] [DELETE_FAILED] [6cf6e1e7-3fc4-455e-9a8c-095618441331] [404 Not Found]
-2026/03/19 05:15:06 [42] [CREATING_VIDEO_CONTAINER] [aerokube/video-recorder]
-2026/03/19 05:15:06 [42] [STARTING_VIDEO_CONTAINER] [aerokube/video-recorder] [e90e34656806]
-2026/03/19 05:15:06 [42] [VIDEO_CONTAINER_STARTED] [aerokube/video-recorder] [e90e34656806] [0.00s]
-2026/03/19 05:15:06 [42] [SERVICE_STARTED] [selenoid/firefox:33.0] [e90e34656806] [0.00s]
-2026/03/19 05:15:06 [42] [PROXY_TO] [e90e34656806] [http://127.0.0.1:43839]
-2026/03/19 05:15:06 [42] [STOPPING_VIDEO_CONTAINER] [e90e34656806]
-2026/03/19 05:15:06 [42] [REMOVING_CONTAINER] [e90e34656806]
-Error: response from daemon: 404 page not found]
-2026/03/19 05:15:06 [42] [REMOVING_CONTAINER] [e90e34656806]
-Error: response from daemon: 404 page not found]
---- PASS: TestFindDockerIPSpecified (0.01s)
-=== RUN   TestDeleteContainerOnStartupError
-2026/03/19 05:15:06 [42] [LOCATING_SERVICE] [firefox] [33.0]
-2026/03/19 05:15:06 [42] [USING_DOCKER] [firefox] [33.0]
-2026/03/19 05:15:06 [42] [CREATING_CONTAINER] [selenoid/firefox:33.0]
-2026/03/19 05:15:06 [42] [STARTING_CONTAINER] [selenoid/firefox:33.0] [e90e34656806]
-2026/03/19 05:15:06 [42] [REMOVING_CONTAINER] [e90e34656806]
-2026/03/19 05:15:06 [42] [CONTAINER_REMOVED] [e90e34656806]
---- PASS: TestDeleteContainerOnStartupError (0.00s)
-=== RUN   TestFindDriver
-2026/03/19 05:15:06 [42] [LOCATING_SERVICE] [internet explorer] []
-2026/03/19 05:15:06 [-] [DEFAULT_VERSION] [Using default version: 11]
-2026/03/19 05:15:06 [42] [USING_DRIVER] [internet explorer] [11]
---- PASS: TestFindDriver (0.00s)
-=== RUN   TestGetVNC
-2026/03/19 05:15:06 [93] [VNC_ENABLED] [test-session]
-2026/03/19 05:15:06 [93] [VNC_CLIENT_DISCONNECTED] [test-session]
-2026/03/19 05:15:06 [93] [VNC_SESSION_CLOSED] [test-session]
---- PASS: TestGetVNC (0.00s)
-=== RUN   TestGetLogs
-2026/03/19 05:15:06 [95] [CONTAINER_LOGS] [e90e34656806]
-2026/03/19 05:15:06 [95] [CONTAINER_LOGS_DISCONNECTED] [test-session]
---- PASS: TestGetLogs (0.00s)
-=== RUN   TestProcessExtensionCapabilities
---- PASS: TestProcessExtensionCapabilities (0.00s)
-=== RUN   TestSumUsedTotalGreaterThanPending
-2026/03/19 05:15:06 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:15:06 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:15:06 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:15:06 [-] [NEW_REQUEST_ACCEPTED] [unknown] [127.0.0.1]
-2026/03/19 05:15:06 [-] [NEW_REQUEST] [unknown] [127.0.0.1]
-2026/03/19 05:15:06 [-] [CLIENT_DISCONNECTED] [unknown] [127.0.0.1] [100.288559ms]
---- PASS: TestSumUsedTotalGreaterThanPending (0.20s)
-=== RUN   TestBrowserName
---- PASS: TestBrowserName (0.00s)
-PASS
-coverage: 78.2% of statements in github.com/aerokube/selenoid, github.com/aerokube/selenoid/session, github.com/aerokube/selenoid/config, github.com/aerokube/selenoid/protect, github.com/aerokube/selenoid/service, github.com/aerokube/selenoid/upload, github.com/aerokube/selenoid/info, github.com/aerokube/selenoid/jsonerror
-ok  	github.com/aerokube/selenoid	113.153s
-No vulnerabilities found.
+2026/03/19 05:19:37 [45] [SESSION_TIMED_OUT] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:37 [45] [DELETE_FAILED] [77777777-7777-7777-7777-777777777777] [404 Not Found]
+2026/03/19 05:19:37 [47] [SESSION_TIMED_OUT] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:37 [47] [DELETE_FAILED] [77777777-7777-7777-7777-777777777777] [404 Not Found]
+2026/03/19 05:19:37 [49] [SESSION_TIMED_OUT] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:37 [49] [DELETE_FAILED] [77777777-7777-7777-7777-777777777777] [404 Not Found]
+2026/03/19 05:19:37 [59] [SESSION_TIMED_OUT] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:37 [59] [DELETE_FAILED] [77777777-7777-7777-7777-777777777777] [404 Not Found]
+2026/03/19 05:19:37 [62] [SESSION_TIMED_OUT] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:37 [62] [DELETE_FAILED] [77777777-7777-7777-7777-777777777777] [404 Not Found]
+2026/03/19 05:19:38 [43] [DELETE_FAILED] [77777777-7777-7777-7777-777777777777] [Delete "http://127.0.0.1:44923/wd/hub/session/77777777-7777-7777-7777-777777777777": context deadline exceeded]
+2026/03/19 05:19:40 [17] [SESSION_TIMED_OUT] [a0629d3b-3160-4a64-9b9c-52d2b3a9649f]
+2026/03/19 05:19:40 [17] [DELETE_FAILED] [a0629d3b-3160-4a64-9b9c-52d2b3a9649f] [404 Not Found]
+2026/03/19 05:19:40 [22] [SESSION_TIMED_OUT] [123]
+2026/03/19 05:19:40 [22] [DELETE_FAILED] [123] [404 Not Found]
+2026/03/19 05:19:40 [25] [SESSION_TIMED_OUT] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:40 [25] [DELETE_FAILED] [77777777-7777-7777-7777-777777777777] [404 Not Found]
+2026/03/19 05:19:40 [28] [SESSION_TIMED_OUT] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:40 [28] [DELETE_FAILED] [77777777-7777-7777-7777-777777777777] [404 Not Found]
+2026/03/19 05:19:40 [32] [SESSION_TIMED_OUT] [77777777-7777-7777-7777-777777777777]
+2026/03/19 05:19:40 [32] [DELETE_FAILED] [77777777-7777-7777-7777-777777777777] [404 Not Found]
