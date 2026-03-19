@@ -47,6 +47,11 @@ var (
 	numLock sync.RWMutex
 )
 
+type internalSess struct {
+	ID         string
+	InternalID string
+}
+
 type request struct {
 	*http.Request
 }
@@ -205,7 +210,7 @@ func create(w http.ResponseWriter, r *http.Request) {
 	if startedService.Origin != "" {
 		host = startedService.Origin
 	}
-
+	var s internalSess
 	var resp *http.Response
 	i := 1
 	for ; ; i++ {
@@ -298,11 +303,20 @@ func create(w http.ResponseWriter, r *http.Request) {
 			w.WriteHeader(resp.StatusCode)
 			return
 		}
+		
+		driverSessionId := sessionId
+		devtoolsUUID := fetchDevtoolsUUID(requestId, startedService.HostPort.Devtools)
+		if devtoolsUUID != "" {
+			sessionId = devtoolsUUID
+			newBody = bytes.ReplaceAll(newBody, []byte(driverSessionId), []byte(devtoolsUUID))
+		}
+
 		resp.Body = io.NopCloser(bytes.NewReader(newBody))
 		resp.ContentLength = int64(len(newBody))
 		w.WriteHeader(resp.StatusCode)
 		_, _ = w.Write(newBody)
 		s.ID = sessionId
+		s.InternalID = driverSessionId // Capture it here
 	}
 	if s.ID == "" {
 		log.Printf("[%d] [SESSION_FAILED] [%s] [%s]", requestId, u.String(), resp.Status)
@@ -314,6 +328,7 @@ func create(w http.ResponseWriter, r *http.Request) {
 		Quota:     user,
 		Caps:      caps,
 		URL:       u,
+		ID:        s.InternalID,
 		Container: startedService.Container,
 		HostPort:  startedService.HostPort,
 		Origin:    startedService.Origin,
@@ -584,6 +599,9 @@ func proxy(w http.ResponseWriter, r *http.Request) {
 					r.URL.Path = strings.TrimSuffix(r.URL.Path, seUploadPath) + uploadPath
 				}
 				r.URL.Host, r.URL.Path = sess.URL.Host, path.Clean(sess.URL.Path+r.URL.Path)
+				if sess.ID != "" && sess.ID != id {
+					r.URL.Path = strings.Replace(r.URL.Path, "/session/"+id, "/session/"+sess.ID, 1)
+				}
 				r.Host = "localhost"
 				if sess.Origin != "" {
 					r.Host = sess.Origin
@@ -930,4 +948,32 @@ func rewriteDevtoolsJSON(body []byte, reqScheme string, reqHost string, sid stri
 		return body
 	}
 	return result
+}
+
+func fetchDevtoolsUUID(requestId uint64, devtoolsHost string) string {
+	if devtoolsHost == "" {
+		return ""
+	}
+	for i := 0; i < 3; i++ {
+		ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+		req, _ := http.NewRequestWithContext(ctx, http.MethodGet, "http://"+devtoolsHost+"/json/version", nil)
+		resp, err := httpClient.Do(req)
+		if err == nil {
+			var v struct {
+				WebSocketDebuggerUrl string `json:"webSocketDebuggerUrl"`
+			}
+			decodeErr := json.NewDecoder(resp.Body).Decode(&v)
+			resp.Body.Close()
+			if decodeErr == nil {
+				fragments := strings.Split(v.WebSocketDebuggerUrl, "/")
+				if len(fragments) > 0 {
+					cancel()
+					return fragments[len(fragments)-1]
+				}
+			}
+		}
+		cancel()
+		time.Sleep(500 * time.Millisecond)
+	}
+	return ""
 }

@@ -80,6 +80,7 @@ type Session struct {
 	Quota     string
 	Caps      Caps
 	URL       *url.URL
+	ID        string
 	Container *Container
 	HostPort  HostPort
 	Origin    string
