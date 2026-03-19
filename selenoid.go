@@ -307,18 +307,9 @@ func create(w http.ResponseWriter, r *http.Request) {
 		
 		driverSessionId := sessionId
 		devtoolsHost := startedService.HostPort.Devtools
-		if debuggerAddress != "" {
-			// Replace localhost with container IP if needed
-			if strings.HasPrefix(debuggerAddress, "localhost:") || strings.HasPrefix(debuggerAddress, "127.0.0.1:") {
-				parts := strings.Split(debuggerAddress, ":")
-				if len(parts) == 2 {
-					devtoolsHost = net.JoinHostPort(startedService.Container.IPAddress, parts[1])
-				}
-			}
-		}
+		log.Printf("[%d] [DEBUG] driverSessionId: %s, connecting to devtoolsHost: %s", requestId, driverSessionId, devtoolsHost)
 		
 		devtoolsUUID := fetchDevtoolsUUID(requestId, devtoolsHost)
-		log.Printf("[%d] [DEBUG] driverSessionId: %s, devtoolsUUID: %s", requestId, driverSessionId, devtoolsUUID)
 		if devtoolsUUID != "" {
 			sessionId = devtoolsUUID
 			newBody = bytes.ReplaceAll(newBody, []byte(driverSessionId), []byte(devtoolsUUID))
