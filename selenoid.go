@@ -210,7 +210,7 @@ func create(w http.ResponseWriter, r *http.Request) {
 	if startedService.Origin != "" {
 		host = startedService.Origin
 	}
-	var s internalSess
+	var is internalSess
 	var resp *http.Response
 	i := 1
 	for ; ; i++ {
@@ -277,12 +277,12 @@ func create(w http.ResponseWriter, r *http.Request) {
 		l, err := url.Parse(location)
 		if err == nil {
 			fragments := strings.Split(l.Path, slash)
-			s.ID = fragments[len(fragments)-1]
-			s.InternalID = s.ID // Also capture here
+			is.ID = fragments[len(fragments)-1]
+			is.InternalID = is.ID // Also capture here
 			u := &url.URL{
 				Scheme: "http",
 				Host:   hostname,
-				Path:   path.Join("/wd/hub/session", s.ID),
+				Path:   path.Join("/wd/hub/session", is.ID),
 			}
 			w.Header().Add("Location", u.String())
 			w.WriteHeader(resp.StatusCode)
@@ -318,10 +318,10 @@ func create(w http.ResponseWriter, r *http.Request) {
 		resp.ContentLength = int64(len(newBody))
 		w.WriteHeader(resp.StatusCode)
 		_, _ = w.Write(newBody)
-		s.ID = sessionId
-		s.InternalID = driverSessionId // Capture it here
+		is.ID = sessionId
+		is.InternalID = driverSessionId // Capture it here
 	}
-	if s.ID == "" {
+	if is.ID == "" {
 		log.Printf("[%d] [SESSION_FAILED] [%s] [%s]", requestId, u.String(), resp.Status)
 		queue.Drop()
 		cancel()
@@ -331,13 +331,13 @@ func create(w http.ResponseWriter, r *http.Request) {
 		Quota:     user,
 		Caps:      caps,
 		URL:       u,
-		ID:        s.InternalID,
+		ID:        is.InternalID,
 		Container: startedService.Container,
 		HostPort:  startedService.HostPort,
 		Origin:    startedService.Origin,
 		Timeout:   sessionTimeout,
 		TimeoutCh: onTimeout(sessionTimeout, func() {
-			request{r}.session(s.ID).Delete(requestId)
+			request{r}.session(is.ID).Delete(requestId)
 		}),
 		Started: time.Now()}
 	cancelAndRenameFiles := func() {
@@ -391,9 +391,9 @@ func create(w http.ResponseWriter, r *http.Request) {
 		event.SessionStopped(event.StoppedSession{e})
 	}
 	sess.Cancel = cancelAndRenameFiles
-	sessions.Put(s.ID, sess)
+	sessions.Put(is.ID, sess)
 	queue.Create()
-	log.Printf("[%d] [SESSION_CREATED] [%s] [%d] [%.2fs]", requestId, s.ID, i, info.SecondsSince(sessionStartTime))
+	log.Printf("[%d] [SESSION_CREATED] [%s] [%d] [%.2fs]", requestId, is.ID, i, info.SecondsSince(sessionStartTime))
 }
 
 func removeSelenoidOptions(input []byte) []byte {
