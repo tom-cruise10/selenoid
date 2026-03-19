@@ -323,8 +323,14 @@ func create(w http.ResponseWriter, r *http.Request) {
 		devtoolsUUID := fetchDevtoolsUUID(requestId, devtoolsHost)
 		if devtoolsUUID != "" {
 			sessionId = devtoolsUUID
+			
+			// Replace the Selenoid devtools proxy URL with the direct Chrome container URL
+			proxyCdp := []byte(fmt.Sprintf("ws://%s/devtools/%s/", r.Host, driverSessionId))
+			directCdp := []byte(fmt.Sprintf("ws://%s/devtools/browser/%s", devtoolsHost, devtoolsUUID))
+			newBody = bytes.ReplaceAll(newBody, proxyCdp, directCdp)
+			
 			newBody = bytes.ReplaceAll(newBody, []byte(driverSessionId), []byte(devtoolsUUID))
-			log.Printf("[%d] [DEBUG] Mapped session ID to UUID: %s", requestId, sessionId)
+			log.Printf("[%d] [DEBUG] Mapped session ID to UUID: %s (Direct CDP: %s)", requestId, sessionId, string(directCdp))
 		}
 
 		resp.Body = io.NopCloser(bytes.NewReader(newBody))
