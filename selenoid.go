@@ -296,7 +296,7 @@ func create(w http.ResponseWriter, r *http.Request) {
 			w.WriteHeader(resp.StatusCode)
 			return
 		}
-		newBody, sessionId, err := processBody(body, r.Host)
+		newBody, sessionId, debuggerAddress, err := processBody(body, r.Host)
 		if err != nil {
 			log.Printf("[%d] [ERROR_PROCESSING_RESPONSE] [%v]", requestId, err)
 			queue.Drop()
@@ -306,7 +306,18 @@ func create(w http.ResponseWriter, r *http.Request) {
 		}
 		
 		driverSessionId := sessionId
-		devtoolsUUID := fetchDevtoolsUUID(requestId, startedService.HostPort.Devtools)
+		devtoolsHost := startedService.HostPort.Devtools
+		if debuggerAddress != "" {
+			// Replace localhost with container IP if needed
+			if strings.HasPrefix(debuggerAddress, "localhost:") || strings.HasPrefix(debuggerAddress, "127.0.0.1:") {
+				parts := strings.Split(debuggerAddress, ":")
+				if len(parts) == 2 {
+					devtoolsHost = net.JoinHostPort(startedService.Container.IPAddress, parts[1])
+				}
+			}
+		}
+		
+		devtoolsUUID := fetchDevtoolsUUID(requestId, devtoolsHost)
 		log.Printf("[%d] [DEBUG] driverSessionId: %s, devtoolsUUID: %s", requestId, driverSessionId, devtoolsUUID)
 		if devtoolsUUID != "" {
 			sessionId = devtoolsUUID
@@ -427,12 +438,13 @@ func removeSelenoidOptions(input []byte) []byte {
 	return ret
 }
 
-func processBody(input []byte, host string) ([]byte, string, error) {
+func processBody(input []byte, host string) ([]byte, string, string, error) {
 	body := make(map[string]interface{})
 	sessionId := ""
+	debuggerAddress := ""
 	err := json.Unmarshal(input, &body)
 	if err != nil {
-		return nil, sessionId, fmt.Errorf("parse body response: %v", err)
+		return nil, sessionId, debuggerAddress, fmt.Errorf("parse body response: %v", err)
 	}
 	// handle jsonwp response from older browsers (chrome < 75)
 	if rawId, ok := body["sessionId"]; ok {
@@ -446,6 +458,13 @@ func processBody(input []byte, host string) ([]byte, string, error) {
 					if c, ok := raw.(map[string]interface{}); ok {
 						sessionId = v["sessionId"].(string)
 						c["se:cdp"] = fmt.Sprintf("ws://%s/devtools/%s/", host, sessionId)
+						if opts, ok := c["goog:chromeOptions"]; ok {
+							if om, ok := opts.(map[string]interface{}); ok {
+								if da, ok := om["debuggerAddress"]; ok {
+									debuggerAddress = da.(string)
+								}
+							}
+						}
 						if rbv, ok := c["browserVersion"]; ok {
 							if bv, ok := rbv.(string); ok {
 								c["se:cdpVersion"] = bv
@@ -458,9 +477,9 @@ func processBody(input []byte, host string) ([]byte, string, error) {
 	}
 	ret, err := json.Marshal(body)
 	if err != nil {
-		return nil, sessionId, fmt.Errorf("marshal response: %v", err)
+		return nil, sessionId, debuggerAddress, fmt.Errorf("marshal response: %v", err)
 	}
-	return ret, sessionId, nil
+	return ret, sessionId, debuggerAddress, nil
 }
 
 func preprocessSessionId(sid string) string {
@@ -959,11 +978,14 @@ func fetchDevtoolsUUID(requestId uint64, devtoolsHost string) string {
 	if devtoolsHost == "" {
 		return ""
 	}
-	for i := 0; i < 3; i++ {
+	for i := 0; i < 10; i++ {
 		ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-		req, _ := http.NewRequestWithContext(ctx, http.MethodGet, "http://"+devtoolsHost+"/json/version", nil)
+		url := "http://"+devtoolsHost+"/json/version"
+		req, _ := http.NewRequestWithContext(ctx, http.MethodGet, url, nil)
 		resp, err := httpClient.Do(req)
-		if err == nil {
+		if err != nil {
+			log.Printf("[%d] [DEBUG] fetchDevtoolsUUID attempt %d failed to connect to %s: %v", requestId, i, url, err)
+		} else {
 			var v struct {
 				WebSocketDebuggerUrl string `json:"webSocketDebuggerUrl"`
 			}
@@ -975,6 +997,8 @@ func fetchDevtoolsUUID(requestId uint64, devtoolsHost string) string {
 					cancel()
 					return fragments[len(fragments)-1]
 				}
+			} else {
+				log.Printf("[%d] [DEBUG] fetchDevtoolsUUID attempt %d decode error from %s: %v", requestId, i, url, decodeErr)
 			}
 		}
 		cancel()
