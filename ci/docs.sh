@@ -17,7 +17,19 @@ git worktree prune
 rm -rf ${GITHUB_WORKSPACE}/.git/worktrees/docs/output/
 
 echo "Checking out gh-pages branch into docs/output"
-git worktree add -B gh-pages ${GITHUB_WORKSPACE}/docs/output upstream/gh-pages
+if git ls-remote --exit-code --heads upstream gh-pages; then
+  git worktree add -B gh-pages ${GITHUB_WORKSPACE}/docs/output upstream/gh-pages
+else
+  echo "gh-pages branch does not exist, creating an empty orphan branch locally..."
+  git worktree add ${GITHUB_WORKSPACE}/docs/output
+  cd ${GITHUB_WORKSPACE}/docs/output
+  git checkout --orphan temp-gh-pages
+  git rm -rf .
+  git commit --allow-empty -m "Initial gh-pages commit"
+  git branch -D gh-pages || true
+  git branch -m gh-pages
+  cd ${GITHUB_WORKSPACE}
+fi
 
 echo "Removing existing files"
 mkdir -p ${GITHUB_WORKSPACE}/docs/output/${TAGNAME}
