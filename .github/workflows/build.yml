@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - master
+      - main
+
+permissions:
+  contents: write
+  packages: write
 
 jobs:
   golang:
@@ -34,8 +39,7 @@ jobs:
 
       - name: Latest image
         env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ci/docker-push.sh latest
 
       - name: Latest docs
