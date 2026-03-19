@@ -963,28 +963,46 @@ func fetchDevtoolsUUID(requestId uint64, devtoolsHost string) string {
 	}
 	for i := 0; i < 10; i++ {
 		ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-		url := "http://"+devtoolsHost+"/json/version"
-		req, _ := http.NewRequestWithContext(ctx, http.MethodGet, url, nil)
-		resp, err := httpClient.Do(req)
-		if err != nil {
-			log.Printf("[%d] [DEBUG] fetchDevtoolsUUID attempt %d failed to connect to %s: %v", requestId, i, url, err)
-		} else {
+		var endpoints = []string{"/json/version", "/json"}
+		for _, ep := range endpoints {
+			url := "http://"+devtoolsHost+ep
+			req, _ := http.NewRequestWithContext(ctx, http.MethodGet, url, nil)
+			resp, err := httpClient.Do(req)
+			if err != nil {
+				log.Printf("[%d] [DEBUG] fetchDevtoolsUUID attempt %d failed to connect to %s: %v", requestId, i, url, err)
+				continue
+			}
 			bodyBytes, _ := io.ReadAll(resp.Body)
 			resp.Body.Close()
+			
+			// Try to parse as single object (json/version)
 			var v struct {
 				WebSocketDebuggerUrl string `json:"webSocketDebuggerUrl"`
 			}
-			decodeErr := json.Unmarshal(bodyBytes, &v)
-			if decodeErr == nil {
+			if err := json.Unmarshal(bodyBytes, &v); err == nil && v.WebSocketDebuggerUrl != "" {
 				fragments := strings.Split(v.WebSocketDebuggerUrl, "/")
 				if len(fragments) > 0 {
 					cancel()
 					return fragments[len(fragments)-1]
 				}
-			} else {
-				log.Printf("[%d] [DEBUG] fetchDevtoolsUUID attempt %d decode error from %s: %v", requestId, i, url, decodeErr)
-				log.Printf("[%d] [DEBUG] fetchDevtoolsUUID raw body: %s", requestId, string(bodyBytes))
 			}
+			
+			// Try to parse as array (json)
+			var va []struct {
+				WebSocketDebuggerUrl string `json:"webSocketDebuggerUrl"`
+			}
+			if err := json.Unmarshal(bodyBytes, &va); err == nil && len(va) > 0 {
+				for _, entry := range va {
+					if entry.WebSocketDebuggerUrl != "" {
+						fragments := strings.Split(entry.WebSocketDebuggerUrl, "/")
+						if len(fragments) > 0 {
+							cancel()
+							return fragments[len(fragments)-1]
+						}
+					}
+				}
+			}
+			log.Printf("[%d] [DEBUG] fetchDevtoolsUUID attempt %d at %s failed (body: %s)", requestId, i, url, string(bodyBytes))
 		}
 		cancel()
 		time.Sleep(500 * time.Millisecond)
