@@ -610,20 +610,41 @@ func reverseProxy(hostFn func(sess *session.Session) string, status string) func
 		sid, remainingPath := splitRequestPath(r.URL.Path)
 		sess, ok := sessions.Get(sid)
 		if ok {
-			select {
-			case <-sess.TimeoutCh:
-			default:
-				close(sess.TimeoutCh)
+			done := keepAlive(requestId, r, sess)
+			defer close(done)
+			
+			reqHost := r.Host
+			if h := r.Header.Get("X-Forwarded-Host"); h != "" {
+				reqHost = h
 			}
-			sess.TimeoutCh = onTimeout(sess.Timeout, func() {
-				request{r}.session(sid).Delete(requestId)
-			})
+			reqScheme := "ws"
+			if p := r.Header.Get("X-Forwarded-Proto"); p != "" {
+				if p == "https" {
+					reqScheme = "wss"
+				}
+			} else if r.TLS != nil {
+				reqScheme = "wss"
+			}
+			
 			(&httputil.ReverseProxy{
 				Director: func(r *http.Request) {
 					r.URL.Scheme = "http"
 					r.URL.Host = hostFn(sess)
 					r.URL.Path = remainingPath
 					log.Printf("[%d] [%s] [%s] [%s]", requestId, status, sid, remainingPath)
+				},
+				ModifyResponse: func(resp *http.Response) error {
+					if status == "DEVTOOLS" && resp.StatusCode == http.StatusOK && strings.HasPrefix(resp.Request.URL.Path, "/json") {
+						body, err := io.ReadAll(resp.Body)
+						if err == nil {
+							resp.Body.Close()
+							newBody := rewriteDevtoolsJSON(body, reqScheme, reqHost, sid)
+							resp.Body = io.NopCloser(bytes.NewReader(newBody))
+							resp.ContentLength = int64(len(newBody))
+							resp.Header.Set("Content-Length", fmt.Sprintf("%d", len(newBody)))
+						}
+					}
+					return nil
 				},
 				ErrorHandler: defaultErrorHandler(requestId),
 			}).ServeHTTP(w, r)
@@ -698,6 +719,8 @@ func vnc(wsconn *websocket.Conn) {
 	sid, _ := splitRequestPath(wsconn.Request().URL.Path)
 	sess, ok := sessions.Get(sid)
 	if ok {
+		done := keepAlive(requestId, wsconn.Request(), sess)
+		defer close(done)
 		vncHostPort := sess.HostPort.VNC
 		if vncHostPort != "" {
 			log.Printf("[%d] [VNC_ENABLED] [%s]", requestId, sid)
@@ -770,6 +793,8 @@ func streamLogs(wsconn *websocket.Conn) {
 	sid, _ := splitRequestPath(wsconn.Request().URL.Path)
 	sess, ok := sessions.Get(sid)
 	if ok && sess.Container != nil {
+		done := keepAlive(requestId, wsconn.Request(), sess)
+		defer close(done)
 		log.Printf("[%d] [CONTAINER_LOGS] [%s]", requestId, sess.Container.ID)
 		r, err := cli.ContainerLogs(wsconn.Request().Context(), sess.Container.ID, container.LogsOptions{
 			ShowStdout: true,
@@ -816,4 +841,93 @@ func onTimeout(t time.Duration, f func()) chan struct{} {
 		}
 	}(cancel)
 	return cancel
+}
+
+func keepAlive(requestId uint64, req *http.Request, sess *session.Session) chan struct{} {
+	done := make(chan struct{})
+	if sess.Timeout <= 0 {
+		return done
+	}
+
+	sess.Lock.Lock()
+	if sess.TimeoutCh != nil {
+		select {
+		case <-sess.TimeoutCh:
+		default:
+			close(sess.TimeoutCh)
+		}
+	}
+	sess.TimeoutCh = onTimeout(sess.Timeout, func() {
+		sid, _ := splitRequestPath(req.URL.Path)
+		request{req}.session(sid).Delete(requestId)
+	})
+	sess.Lock.Unlock()
+
+	if sess.Timeout > 0 {
+		go func() {
+			ticker := time.NewTicker(sess.Timeout / 2)
+			defer ticker.Stop()
+			for {
+				select {
+				case <-ticker.C:
+					sess.Lock.Lock()
+					if sess.TimeoutCh != nil {
+						select {
+						case <-sess.TimeoutCh:
+						default:
+							close(sess.TimeoutCh)
+						}
+					}
+					sess.TimeoutCh = onTimeout(sess.Timeout, func() {
+						sid, _ := splitRequestPath(req.URL.Path)
+						request{req}.session(sid).Delete(requestId)
+					})
+					sess.Lock.Unlock()
+				case <-done:
+					return
+				}
+			}
+		}()
+	}
+	return done
+}
+
+func rewriteDevtoolsJSON(body []byte, reqScheme string, reqHost string, sid string) []byte {
+	var raw interface{}
+	if err := json.Unmarshal(body, &raw); err != nil {
+		return body
+	}
+
+	var walk func(v interface{})
+	walk = func(v interface{}) {
+		switch val := v.(type) {
+		case map[string]interface{}:
+			for k, child := range val {
+				if k == "webSocketDebuggerUrl" {
+					if s, ok := child.(string); ok {
+						u, err := url.Parse(s)
+						if err == nil {
+							u.Scheme = reqScheme
+							u.Host = reqHost
+							u.Path = "/devtools/" + sid + u.Path
+							val[k] = u.String()
+						}
+					}
+				} else {
+					walk(child)
+				}
+			}
+		case []interface{}:
+			for _, child := range val {
+				walk(child)
+			}
+		}
+	}
+
+	walk(raw)
+	result, err := json.Marshal(raw)
+	if err != nil {
+		return body
+	}
+	return result
 }
