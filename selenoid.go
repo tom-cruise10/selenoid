@@ -986,11 +986,12 @@ func fetchDevtoolsUUID(requestId uint64, devtoolsHost string) string {
 		if err != nil {
 			log.Printf("[%d] [DEBUG] fetchDevtoolsUUID attempt %d failed to connect to %s: %v", requestId, i, url, err)
 		} else {
+			bodyBytes, _ := io.ReadAll(resp.Body)
+			resp.Body.Close()
 			var v struct {
 				WebSocketDebuggerUrl string `json:"webSocketDebuggerUrl"`
 			}
-			decodeErr := json.NewDecoder(resp.Body).Decode(&v)
-			resp.Body.Close()
+			decodeErr := json.Unmarshal(bodyBytes, &v)
 			if decodeErr == nil {
 				fragments := strings.Split(v.WebSocketDebuggerUrl, "/")
 				if len(fragments) > 0 {
@@ -999,6 +1000,7 @@ func fetchDevtoolsUUID(requestId uint64, devtoolsHost string) string {
 				}
 			} else {
 				log.Printf("[%d] [DEBUG] fetchDevtoolsUUID attempt %d decode error from %s: %v", requestId, i, url, decodeErr)
+				log.Printf("[%d] [DEBUG] fetchDevtoolsUUID raw body: %s", requestId, string(bodyBytes))
 			}
 		}
 		cancel()
