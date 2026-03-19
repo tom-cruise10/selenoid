@@ -147,6 +147,14 @@ func Selenium(nsp ...func(map[string]interface{})) http.Handler {
 		w.WriteHeader(http.StatusOK)
 		_, _ = w.Write([]byte("test-data"))
 	})
+	mux.HandleFunc("/json/version", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		_, _ = w.Write([]byte(`{"webSocketDebuggerUrl": "ws://localhost:1234/devtools/browser/77777777-7777-7777-7777-777777777777"}`))
+	})
+	mux.HandleFunc("/json", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		_, _ = w.Write([]byte(`[{"webSocketDebuggerUrl": "ws://localhost:1234/devtools/browser/77777777-7777-7777-7777-777777777777"}]`))
+	})
 	upgrader := websocket.Upgrader{
 		CheckOrigin: func(_ *http.Request) bool {
 			return true
