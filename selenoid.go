@@ -278,6 +278,7 @@ func create(w http.ResponseWriter, r *http.Request) {
 		if err == nil {
 			fragments := strings.Split(l.Path, slash)
 			s.ID = fragments[len(fragments)-1]
+			s.InternalID = s.ID // Also capture here
 			u := &url.URL{
 				Scheme: "http",
 				Host:   hostname,
@@ -306,9 +307,11 @@ func create(w http.ResponseWriter, r *http.Request) {
 		
 		driverSessionId := sessionId
 		devtoolsUUID := fetchDevtoolsUUID(requestId, startedService.HostPort.Devtools)
+		log.Printf("[%d] [DEBUG] driverSessionId: %s, devtoolsUUID: %s", requestId, driverSessionId, devtoolsUUID)
 		if devtoolsUUID != "" {
 			sessionId = devtoolsUUID
 			newBody = bytes.ReplaceAll(newBody, []byte(driverSessionId), []byte(devtoolsUUID))
+			log.Printf("[%d] [DEBUG] Mapped session ID to UUID: %s", requestId, sessionId)
 		}
 
 		resp.Body = io.NopCloser(bytes.NewReader(newBody))
@@ -598,9 +601,11 @@ func proxy(w http.ResponseWriter, r *http.Request) {
 				if strings.HasSuffix(r.URL.Path, seUploadPath) {
 					r.URL.Path = strings.TrimSuffix(r.URL.Path, seUploadPath) + uploadPath
 				}
+				oldPath := r.URL.Path
 				r.URL.Host, r.URL.Path = sess.URL.Host, path.Clean(sess.URL.Path+r.URL.Path)
 				if sess.ID != "" && sess.ID != id {
 					r.URL.Path = strings.Replace(r.URL.Path, "/session/"+id, "/session/"+sess.ID, 1)
+					log.Printf("[%d] [DEBUG] Translated path: %s -> %s", requestId, oldPath, r.URL.Path)
 				}
 				r.Host = "localhost"
 				if sess.Origin != "" {
