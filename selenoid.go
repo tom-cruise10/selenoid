@@ -296,7 +296,7 @@ func create(w http.ResponseWriter, r *http.Request) {
 			w.WriteHeader(resp.StatusCode)
 			return
 		}
-		newBody, sessionId, err := processBody(body, r.Host)
+		newBody, sessionId, debuggerAddress, err := processBody(body, r.Host)
 		if err != nil {
 			log.Printf("[%d] [ERROR_PROCESSING_RESPONSE] [%v]", requestId, err)
 			queue.Drop()
@@ -307,6 +307,17 @@ func create(w http.ResponseWriter, r *http.Request) {
 		
 		driverSessionId := sessionId
 		devtoolsHost := startedService.HostPort.Devtools
+		
+		if startedService.Container != nil && debuggerAddress != "" {
+			ip, port, err := net.SplitHostPort(debuggerAddress)
+			if err == nil {
+				if ip == "localhost" || ip == "127.0.0.1" {
+					ip = startedService.Container.IPAddress
+				}
+				devtoolsHost = net.JoinHostPort(ip, port)
+			}
+		}
+
 		log.Printf("[%d] [DEBUG] driverSessionId: %s, connecting to devtoolsHost: %s", requestId, driverSessionId, devtoolsHost)
 		
 		devtoolsUUID := fetchDevtoolsUUID(requestId, devtoolsHost)
@@ -429,17 +440,34 @@ func removeSelenoidOptions(input []byte) []byte {
 	return ret
 }
 
-func processBody(input []byte, host string) ([]byte, string, error) {
+func processBody(input []byte, host string) ([]byte, string, string, error) {
 	body := make(map[string]interface{})
 	sessionId := ""
+	debuggerAddress := ""
 	err := json.Unmarshal(input, &body)
 	if err != nil {
-		return nil, sessionId, fmt.Errorf("parse body response: %v", err)
+		return nil, sessionId, debuggerAddress, fmt.Errorf("parse body response: %v", err)
 	}
+
+	extractDebuggerAddress := func(caps map[string]interface{}) {
+		if rawOpts, ok := caps["goog:chromeOptions"]; ok {
+			if opts, ok := rawOpts.(map[string]interface{}); ok {
+				if da, ok := opts["debuggerAddress"].(string); ok {
+					debuggerAddress = da
+				}
+			}
+		}
+	}
+
 	// handle jsonwp response from older browsers (chrome < 75)
 	if rawId, ok := body["sessionId"]; ok {
 		if si, ok := rawId.(string); ok {
 			sessionId = si
+		}
+		if rawCaps, ok := body["value"]; ok {
+			if caps, ok := rawCaps.(map[string]interface{}); ok {
+				extractDebuggerAddress(caps)
+			}
 		}
 	} else {
 		if raw, ok := body["value"]; ok {
@@ -453,6 +481,7 @@ func processBody(input []byte, host string) ([]byte, string, error) {
 								c["se:cdpVersion"] = bv
 							}
 						}
+						extractDebuggerAddress(c)
 					}
 				}
 			}
@@ -460,9 +489,9 @@ func processBody(input []byte, host string) ([]byte, string, error) {
 	}
 	ret, err := json.Marshal(body)
 	if err != nil {
-		return nil, sessionId, fmt.Errorf("marshal response: %v", err)
+		return nil, sessionId, debuggerAddress, fmt.Errorf("marshal response: %v", err)
 	}
-	return ret, sessionId, nil
+	return ret, sessionId, debuggerAddress, nil
 }
 
 func preprocessSessionId(sid string) string {
